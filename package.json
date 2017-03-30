@@ -112,6 +112,7 @@
     "start": "sh ./scripts/run_webpack.sh",
     "postinstall": "sh ./scripts/build.sh",
     "build": "sh ./scripts/build.sh",
-    "lint": "standard"
+    "lint": "standard",
+    "heroku-postbuild": "sh ./scripts/build.sh"
   }
 }
