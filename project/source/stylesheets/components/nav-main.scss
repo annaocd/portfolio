@@ -1,0 +1,73 @@
+@import '../base/fonts';
+
+.nav-main {
+  text-align: center;
+  width: 90%;
+  margin: auto;
+  position: absolute;
+  left: 50%;
+  margin-top: -9px;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.nav-main__link {
+  //@include work-sans;
+  position: relative;
+  margin: 0 20px;
+  padding: 0 10px;
+  text-transform: uppercase;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0);
+  font-size: 16px;
+  font-weight: bold;
+  transform: scale(0.9);
+  display: inline-block;
+  transition: transform .1s ease-in;
+
+  &,
+  &:visited {
+    color: #3c3120;
+
+    &:before {
+      background-color: #fefbf8;
+    }
+  }
+
+  &:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transform: scale(0);
+    transition: transform 200ms ease-in;
+  }
+
+  &:hover {
+    font-style: none;
+
+    &:before {
+      opacity: 1;
+      transform: scale(0.9);
+    }
+  }
+}
+
+.nav-main__link--active {
+
+  &,
+  &:hover,
+  &:visited {
+    text-shadow: 0px 1px 1px rgba(121, 121, 121, 0.3);
+    color: #8A4FFF;
+    transform: scale(1.2);
+
+    &:before {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}

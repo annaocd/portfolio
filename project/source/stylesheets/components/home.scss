@@ -1,0 +1,39 @@
+@import '../base/mixins';
+
+.home {
+
+  .content-list__item {
+    padding-bottom: 60px;
+  }
+
+  .tag-list {
+    position: absolute;
+    bottom: 20px;
+  }
+
+  .section-intro {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .column {
+    align-self: flex-start;
+  }
+
+  .column--content {
+    margin-right: 5%;
+    text-align: justify;
+    width: 110%; // why?
+  }
+
+  .column--image {
+    @include border-shadow;
+    font-size: 0;
+    line-height: 0;
+
+    img {
+      filter: grayscale(50%);
+      //animation: hue-rotate 2000ms infinite alternate;
+    }
+  }
+}

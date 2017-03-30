@@ -1,0 +1,179 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(20deg, #4b4d63, #c3bcce) no-repeat fixed;//linear-gradient(to top, #594580, #726290);
+  //background-color: #755ba7; // #8a4fff;//#fefbf8;
+  padding-top: 110px;
+  margin: 0;
+  overflow-x: hidden;
+  height: 100%;
+
+  &.has-modal {
+    overflow: hidden;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+section {
+  margin-bottom: 15px;
+}
+
+ul {
+  @include microfix;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  &:not(:last-child){
+    margin-bottom: 20px;
+  }
+}
+
+.block {
+  display: block;
+}
+
+.clear-left {
+  clear: left;
+}
+
+.app-container {
+  padding: 0 0 20px;
+  position: relative;
+
+  &:before,
+  &:after {
+    content: '';
+    background-color: #aea8bb;
+    position: fixed;
+    width: calc(100% + 15px);
+    opacity: .7;
+    transition: transform 500ms 100ms;
+  }
+
+  &:before {
+    left: -26px;
+    top: -107px;
+    z-index: 1;
+    transform: rotate(-4.25deg);
+    height: 145px;
+  }
+
+  &:after {
+    left: 0;
+    top: -100px;
+    z-index: 0;
+    transform: rotate(3.25deg);
+    height: 115px;
+  }
+
+  &.app-container--home {
+
+    &:before {
+      left: -26px;
+      top: -110px;
+      transform: rotate(-9.25deg);
+    }
+
+    &:after {
+      left: 0;
+      top: -147px;
+      transform: rotate(10.25deg);
+    }
+  }
+}
+
+.page-container {
+  width: 80%;
+  margin: auto;
+  position: relative;
+}
+
+.section-intro {
+  text-align: justify;
+  padding: 40px 0;
+
+  p {
+    font-size: 20px;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
+  }
+}
+
+.page-content {
+
+  h2 {
+    @include bungee-inline;
+  }
+}
+
+button,
+.button {
+  @include shadow;
+  cursor: pointer;
+  outline: none;
+  display: inline-block;
+  background-color: #eff9ae;
+  color: #3c3120;
+  font-weight: bold;
+  border: 1px inset transparent;
+  padding: 10px;
+  transition: box-shadow 150ms, border-color 150ms;
+
+  &:before {
+    display: none;
+  }
+
+  &:hover {
+    border-color: #3c3120;
+    box-shadow: 0px 0px 0px #3c3120;
+  }
+
+  .material-icons {
+    font-size: 14px;
+  }
+}
+
+.button-alt {
+  @include border;
+  background-color: transparent;
+  padding: 10px;
+  display: inline-block;
+  color: #fefbf8;
+  transition: color 200ms;
+
+  &:before {
+    width: 100%;
+    height: 100%;
+    background-color: #f4ddf7;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    transform: scale(1, 0);
+  }
+
+  &:hover {
+    color: #9074c6;
+
+    &:before {
+      transform: scale(1, 1);
+      opacity: 0.9;
+    }
+  }
+}

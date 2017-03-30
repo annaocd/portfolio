@@ -1,0 +1,37 @@
+@import '../base/fonts';
+
+.greeting {
+
+  &:after {
+    display: inline-block;
+    padding: 0 5px 0 5px;
+  }
+
+  &--morning {
+
+    &:after {
+      content: '\2615';
+    }
+  }
+
+  &--afternoon {
+
+    &:after {
+      content: '\2600';
+    }
+  }
+
+  &--evening {
+
+    &:after {
+      content: '\1F319';
+    }
+  }
+
+  &--late {
+
+    &:after {
+      content: '\1F440';
+    }
+  }
+}

@@ -1,0 +1,31 @@
+@import '../base/fonts';
+
+.aspect-ratio {
+  position: relative;
+
+  &.is-absolute {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 100%;
+  }
+}
+
+.aspect-ratio__spacer {
+  display: block;
+  content: "";
+  width: 100%;
+}
+
+.aspect-ratio__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

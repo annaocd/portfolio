@@ -1,0 +1,61 @@
+svg {
+  cursor: default;
+  display: block;
+  width: 285px;
+  height: 200px;
+  margin: auto;
+}
+
+circle {
+  cursor: pointer;
+}
+
+// players
+.player-list {
+  border-bottom: 2px solid;
+  display: inline-block;
+  list-style: none;
+  position: relative;
+  transform: translateX(-50%);
+  left: 50%;
+  padding: 0;
+  margin: 20px 0 0;
+  display: flex;
+  width: 260px;
+}
+
+.player-list__item {
+  flex-grow: 1;
+  text-align: center;
+  padding: 0 0 8px;
+  //transition: box-shadow 300ms;
+  position: relative;
+
+  &:not(:last-child) {
+    border-right: 2px solid;
+  }
+
+  &.is-turn {
+    //animation: pulse 800ms infinite;
+  }
+}
+
+.player-item__symbol {
+  display: block;
+  width: 70px;
+  margin: 0 auto 10px;
+  font-size: 20px;
+  font-weight: bold;
+
+  .is-turn & {
+    //animation: blink 800ms infinite;
+  }
+}
+
+.player-item__total {
+  font-size: 24px;
+
+  .is-turn & {
+    font-weight: bold;
+  }
+}

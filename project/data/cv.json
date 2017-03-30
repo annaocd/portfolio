@@ -1,0 +1,120 @@
+{
+	"purpose": {
+    "header": "purpose",
+    "text": "I strive to develop robust and intuitive web experiences that provide essential service(s) to users. To be a leader and a learner on a focused and collaborative team."
+  },
+	"skills": {
+    "header": "skills",
+    "list": [
+      "Html5", "JavaScript", "CSS", "React", "Redux", "Flux", "Backbone", "Ember", "Sass", "Yeoman", "Webpack", "Grunt", "Git"
+    ]
+  },
+	"experience": {
+    "header": "experience",
+    "list": [
+      {
+        "company": "RED Interactive",
+        "location": "Santa Monica, CA",
+        "dateStart": "May 2013",
+        "dateEnd": "Dec. 2016",
+        "roles": [
+          {
+            "title": "sr. frontend engineer",
+            "dateStart": "May 2013",
+            "dateEnd": "Oct. 2015"
+          },
+          {
+            "title": "associate director, frontend engineering",
+            "dateStart": "Oct. 2015",
+            "dateEnd": "Dec. 2016"
+          }
+        ],
+        "contributions": [
+          "Continuously evolved frontend tools, libraries, and practices through research and prototyping",
+          "Architected frontend stack and maintained boilerplate generators",
+          "Conducted interviews and skills assessments of all frontend candidates",
+          "Trained and mentored engineering team members through on-boarding and one-on-one sessions",
+          "Developed and maintained core RED products (Scarlet and Ad Analytics) while contributing to weekly feature ideation sessions"
+        ]
+      },
+      {
+        "company": "Crispin Porter + Bogusky",
+        "location": "Santa Monica, CA / Boulder, CO",
+        "dateStart": "Nov. 2008",
+        "dateEnd": "May 2013",
+        "roles": [
+          {
+            "title": "frontend developer",
+            "dateStart": "Nov. 2008",
+            "dateEnd": "Jun. 2010"
+          },
+          {
+            "title": "sr. frontend developer",
+            "dateStart": "Jun. 2010",
+            "dateEnd": "Oct. 2011"
+          },
+          {
+            "title": "architecture lead",
+            "dateStart": "Oct. 2011",
+            "dateEnd": "May 2013"
+          }
+        ],
+        "contributions": [
+          "Led development on the core Agile team for American Express OPEN Forum. Including: v1.0 - v3.0, mobile, and feature release workstreams",
+          "Helped define and maintain development best practices through code reviews, pair programming, and boilerplate/tooling evolvement",
+          "Taught an interactive development course for Miami Ad School"
+        ]
+      },
+      {
+        "company": "Atomicdust",
+        "location": "St. Louis, MO",
+        "dateStart": "Dec. 2005",
+        "dateEnd": "Oct. 2008",
+        "roles": [
+          {
+            "title": "intern",
+            "dateStart": "Dec. 2005",
+            "dateEnd": "Dec. 2006"
+          },
+          {
+            "title": "interactive developer",
+            "dateStart": "Dec. 2006",
+            "dateEnd": "Oct. 2008"
+          }
+        ],
+        "contributions": [
+          "Collaborated with a small multi-disciplinary team from ideation to delivery",
+          "Built presentation, application, and data layers to satisfy project requirements",
+          "Guided development methods into the forefront of web standards best practices (semantic html, css layouts, unobtrusive javascript)"
+        ]
+      }
+    ]
+  },
+  "education": {
+    "header": "education",
+    "list": [
+      {
+        "school": "Webster University",
+        "location": "Webster Groves, MO",
+        "dateStart": "Aug. 2004",
+        "dateEnd": "Dec. 2006",
+        "degree": "Bachelor of Science, Computer Science; Minor, Information Systems",
+        "accolades": [
+          "graduated with department honors",
+          "3.97 GPA / 4.0"
+        ]
+      },
+      {
+        "school": "Ranken Technical College",
+        "location": "St. Louis, MO",
+        "dateStart": "Aug. 2002",
+        "dateEnd": "May 2004",
+        "degree": "Associate of Technology, Web-based Systems",
+        "accolades": [
+          "dean's list recipient",
+          "3.7 GPA / 4.0"
+        ]
+      }
+    ]
+  }
+}

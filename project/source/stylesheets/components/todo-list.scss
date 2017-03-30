@@ -1,0 +1,12 @@
+@import '../base/fonts';
+
+.todo-list {
+
+}
+
+.todo-item {
+
+  &.is-complete {
+    text-decoration: line-through;
+  }
+}

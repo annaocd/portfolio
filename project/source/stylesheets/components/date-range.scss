@@ -1,0 +1,27 @@
+@import '../base/fonts';
+
+.date-range {
+  padding-top: 6px;
+  margin-top: -6px;
+  position: relative;
+}
+
+.date-range__month {
+  display: inline-block;
+  font-size: 8px;
+  margin-right: 4px;
+  position: absolute;
+  top: 0;
+}
+
+.date-range__year {
+
+  &:not(:last-child) {
+
+
+    &:after {
+      content: '~';
+      margin: 0 8px;
+    }
+  }
+}

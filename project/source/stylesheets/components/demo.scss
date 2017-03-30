@@ -1,0 +1,24 @@
+@import '../base/fonts';
+
+.demo {
+}
+
+.project {
+  display: flex;
+}
+
+.project__info {
+  width: 40%;
+  margin-right: 50px;
+}
+
+.project__demo {
+  flex-grow: 1;
+  padding: 40px;
+  background: rgba(203, 195, 218, 0.38);
+  box-shadow: 2px 2px 0px #3c3120;
+
+  .demo--slider & {
+    padding: 0;
+  }
+}

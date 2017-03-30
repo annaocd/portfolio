@@ -1,0 +1,98 @@
+@mixin microfix {
+
+  &:after {
+    content: '';
+    display:table;
+    clear:both;
+  }
+}
+
+
+@mixin icon-link($type: 'open_in_new', $align-left: false) {
+  $padding: 20px;
+  position: relative;
+
+  @if ($align-left) {
+    padding-left: $padding;
+  } @else {
+    padding-right: $padding;
+  }
+
+  &:before {
+    width: calc(100% - 20px);
+
+    @if ($align-left) {
+      left: $padding;
+    } @else {
+      right: $padding;
+    }
+  }
+
+  &:after {
+    @include material-icons;
+    content: $type;
+    font-size: 16px;
+    position: absolute;
+    top: 1px;
+
+    @if ($align-left) {
+      left: 0;
+    } @else {
+      right: 0;
+    }
+  }
+}
+
+@mixin icon-link-hover($type: 'open_in_new') {
+  @include icon-link($type: $type);
+  padding-right: 20px;
+  padding-left: 0;
+
+  &:after {
+    @include material-icons;
+    content: $type;
+    font-size: 88%;
+    position: absolute;
+    top: 2px;
+  }
+
+  &:before {
+    width: calc(100% - 20px);
+    left: 0;
+  }
+
+  &:after {
+    left: auto;
+    right: 0;
+    opacity: 0;
+    transform: translate(10px, 0);
+    transition: transform 200ms, opacity 100ms 50ms;
+  }
+
+  &:hover {
+
+    &:after {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+  }
+}
+
+@mixin flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+@mixin border-shadow {
+  @include border;
+  @include shadow;
+}
+
+@mixin border {
+  border: 2px solid #fbe9f6;
+}
+
+@mixin shadow () {
+  box-shadow: 2px 2px 0px #3c3120;
+}

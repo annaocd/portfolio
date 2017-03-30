@@ -1,0 +1,43 @@
+@keyframes hue-rotate {
+  0%, 100% {
+    filter: hue-rotate(90deg) saturate(2);
+  }
+
+  25%, 75% {
+    filter: hue-rotate(180deg) saturate(2);
+  }
+
+  50% {
+    filter: hue-rotate(270deg) saturate(2);
+  }
+}
+
+@keyframes color-shift {
+  0%, 100% {
+    background-color: #c254f5;
+  }
+  50% {
+    background-color: #c65ef5;
+  }
+  75% {
+    background-color: #d278fc;
+  }
+}
+
+@keyframes blink {
+  0% {
+    transform: scale(1)
+  }
+  50% {
+    transform: scale(1.2)
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.4)
+  }
+  50% {
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.4);
+  }
+}

@@ -1,0 +1,100 @@
+@import '../base/fonts';
+
+.header-main {
+  position: fixed;
+  height: 115px;
+  top: -115px;
+  width: 100%;
+  z-index: 1;
+
+  &:before,
+  &:after {
+    content: '';
+    background-color: #4b4d63;
+    position: absolute;
+    width: calc(100% + 15px);
+    height: calc(100% + 70px);
+    opacity: .7;
+    transition: transform 500ms;
+  }
+
+  &:before {
+    left: -5px;
+    top: -46px;
+    transform: rotate(-2deg);
+    transition-delay: 100ms;
+    //clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 100%, 100% 92%);
+  }
+
+  &:after {
+    left: 0;
+    top: -72px;
+    transform: rotate(0deg);
+    transition-delay: 150ms;
+  }
+
+  h1 {
+    @include roboto-condensed;
+    font-size: 300px;
+    text-transform: uppercase;
+    text-shadow: 2px 1px 0px #3c3120;
+    letter-spacing: -47px;
+    line-height: 130px;
+    white-space: nowrap;
+    display: inline-block;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    top: 10px;
+    left: -16px;
+    height: 130px;
+    width: 100%;
+    transform: rotate(-2deg);
+    transition: transform 200ms 150ms;
+
+    &,
+    a {
+      color: #fbe9f6;
+    }
+  }
+
+  span {
+
+    &:last-of-type {
+      display: none;//inline-block;
+      position: relative;
+      top: -1px;
+      letter-spacing: -1px;
+      left: 49px;
+      transform: rotate(5.25deg);
+    }
+  }
+
+  i {
+    font-style: normal;
+    letter-spacing: -71px;
+  }
+
+  .app-container--home & {
+    height: 115px;
+    top: -134px;
+
+    h1 {
+      top: 32px;
+      left: -24px;
+      transform: rotate(-6.25deg);
+    }
+
+    &:before {
+      top: -24px;
+      left: -20px;
+      transform: rotate(-6.25deg);
+    }
+
+    &:after {
+      transform: rotate(6.25deg);
+    }
+
+  }
+}

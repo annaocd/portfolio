@@ -1,0 +1,293 @@
+@import '../base/vars';
+@import '../base/fonts';
+@import '../base/mixins';
+
+.resume {
+  @include microfix;
+  background-color: #f4ebf5;
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-weight: normal;
+  }
+
+  h3,
+  li,
+  p {
+    color: #3c3120;
+  }
+
+  li,
+  p {
+    font-size: 14px;
+  }
+
+  p {
+    margin: 0 0 5px;
+  }
+
+  section  {
+    padding: 0 10px;
+    margin-bottom: 50px;
+  }
+
+  ul {
+    margin-bottom: 0;
+  }
+
+  .bulleted-list__item {
+
+    &:before {
+      top: 3px;
+    }
+  }
+}
+
+.resume__header-main {
+  @include microfix;
+  text-align: center;
+  padding: 10px 0 25px;
+  margin-bottom: 20px;
+  background:
+    linear-gradient(-135deg, #333538 5px, transparent 0) 0 5px,
+    linear-gradient(135deg, #333538 5px, #f4ebf5 0) 0 5px;
+  background-color: #3c3120;
+  background-position: left bottom;
+  background-repeat: repeat-x;
+  background-size: 10px 10px;
+
+  h2,
+  p {
+    color: #f4ebf5;
+  }
+
+  h1,
+  h2 {
+    @include inconsolata;
+    background-color: transparent;//#3c3120;
+    margin: 0;
+    position: relative;
+    padding: 0 5px;
+    text-transform: capitalize;
+  }
+
+  h1 {
+    color: #fff;
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  .phone-link,
+  .email-link {
+    font-size: 16px;
+    float: left;
+    clear: left;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+    &:after {
+      color: #fbe9f6;
+    }
+  }
+
+  .phone-link {
+    @include icon-link($type: 'phone', $align-left: true);
+  }
+
+  .email-link {
+    @include icon-link($type: 'email', $align-left: true);
+    margin-bottom: 4px;
+  }
+}
+
+.resume__heading {
+  margin: 0 0 20px -10px;
+  padding: 3px 6px 4px 6px;
+
+  &:before {
+    @include material-icons;
+    margin-right: 10px;
+    position: relative;
+    top: 4px;
+  }
+}
+
+.resume__timeframe {
+  @include microfix;
+
+  &:not(:last-of-type) {
+    margin-bottom: 30px;
+  }
+
+  header {
+    @include microfix;
+    border-bottom: 1px dashed #aea8bb;
+    margin-bottom: 12px;
+    padding-bottom: 5px;
+    position: relative;
+
+    h3 {
+      float: left;
+      margin: -2px 0 0 0;
+      font-size: 17px;
+    }
+
+    h4 {
+      float: left;
+      margin: 0 0 0 20px;
+      font-size: 14px;
+      line-height: 19px;
+    }
+
+    .date-range {
+      font-size: 17px;
+      float: right;
+      font-weight: bold;
+    }
+  }
+
+  .block-list {
+    font-size: 12px;
+    float: right;
+    width: 20%;
+    min-width: 200px;
+    text-align: right;
+    border-color: #f1d3ff;
+
+    li {
+      overflow: hidden;
+
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+
+      & > span:last-child {
+        // float: left;
+        // width: 55%;
+        display: block;
+      }
+    }
+
+    .date-range {
+      text-align: left;
+    }
+
+    .date-range__month {
+      display: none;
+    }
+  }
+
+  .bulleted-list {
+    margin: 0;
+    padding-right: 10px;
+    overflow: hidden;
+  }
+}
+
+
+.resume__heading--purpose {
+
+  &:before {
+    content: 'center_focus_strong';
+  }
+}
+
+.resume__heading--skills {
+
+  &:before {
+    content: 'fitness_center';
+  }
+}
+
+.resume__heading--experience {
+
+  &:before {
+    content: 'web';// 'assignment'
+  }
+}
+
+.resume__heading--education {
+
+  &:before {
+    content: 'school'
+  }
+}
+
+.resume__section--education {
+
+  ul {
+    @include microfix;
+    //@include flex-container;
+  }
+
+  li {
+    //flex-grow: 1;
+    float: left;
+    width: 50%;
+
+    &:not(:last-child) {
+      border-right: 2px solid #aea8bb;
+      padding-right: 20px;
+      margin-right: 20px;
+      width: calc(50% - 20px);
+    }
+  }
+
+  header {
+    border: none;
+    padding-bottom: 0;
+    margin-bottom: 4px;
+  }
+}
+
+.resume__section--skills {
+
+  .bulleted-list {
+    @include flex-container;
+  }
+
+  .bulleted-list__item {
+    //flex-basis: 30%;
+    margin: 0 25px 10px 0;
+
+    &:before {
+      @include material-icons;
+      content: 'change_history';
+      font-size: 10px;
+      margin-right: 3px;
+      transform: rotate(90deg);
+    }
+  }
+}
+
+@media (max-width: $bp-small) {
+
+  .resume__timeframe {
+
+    header {
+      position: relative;
+
+      h4 {
+        clear: left;
+        margin-left: 0;
+      }
+
+      .date-range {
+        position: absolute;
+        right: 0px;
+        top: 17px;
+      }
+    }
+  }
+}
+
+//// print ////
+@import './resume--print';
