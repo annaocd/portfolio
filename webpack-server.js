@@ -11,17 +11,17 @@ var compiler = webpack(config)
 var router = express.Router()
 
 app.use(morgan('combined'))
-
-app.use(webpackDevMiddleware(compiler, {
-    noInfo: true,
-    publicPath: config.output.publicPath,
-    history: true
-}))
-
-app.use(webpackHotMiddleware(compiler))
-
 app.use(express.static('/static'))
 app.use(express.static('/data'))
+
+if (process.env.NODE_ENV !== 'production') {
+  app.use(webpackDevMiddleware(compiler, {
+      noInfo: true,
+      publicPath: config.output.publicPath,
+      history: true
+  }))
+  app.use(webpackHotMiddleware(compiler))
+}
 
 app.use(function(req, res, next) {
     if (req.get('content-type') === 'application/json') {
@@ -48,11 +48,14 @@ app.get('*', function(req, res) {
   })
 })
 
-app.listen(3000, '0.0.0.0', function(err) {
-    if (err) {
-        console.log(err)
-        return
-    }
-
-    console.log('Listening at http://0.0.0.0:3000')
-})
+if (process.env.NODE_ENV !== 'production') {
+  app.listen(3000, '0.0.0.0', function(err) {
+      if (err) {
+          console.log(err)
+          return
+      }
+      console.log('Listening at http://0.0.0.0:3000')
+  })
+} else {
+  app.listen(process.env.PORT || 3000)
+}

@@ -21,3 +21,4 @@ fi
 run_task "Lint    " "$STANDARD"
 run_task "Clean   " "$RIMRAF $BASEDIR/project/static"
 run_task "Pack    " "$WEBPACK --config $BASEDIR/webpack.prod.config.js"
+run_task "Start   " "$NPM start"
