@@ -1,0 +1,27 @@
+# Numerous always-ignore extensions
+*.diff
+*.err
+*.orig
+*.rej
+*.swo
+*.swp
+*.vi
+*~
+*.psd
+
+# OS or Editor folders
+.DS_Store
+Thumbs.db
+
+# Folders to ignore
+.static
+
+# npm
+node_modules
+
+# Webpack
+.webpack-stats
+
+# Sass
+.sass-cache
+.temp

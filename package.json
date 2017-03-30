@@ -1,6 +1,9 @@
 {
   "name": "Portfolio",
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "engines": {
+    "node": "5.0.0"
+  },
   "dependencies": {
     "babel-plugin-transform-class-properties": "^6.6.0",
     "babel-plugin-transform-runtime": "^6.6.0",
@@ -107,9 +110,8 @@
   },
   "scripts": {
     "start": "sh ./scripts/run_webpack.sh",
-    "postinstall": "webpack --config ./webpack.prod.config.js",
+    "postinstall": "sh ./scripts/build.sh",
     "build": "sh ./scripts/build.sh",
-    "build:install": "sh ./scripts/build.sh -- --install",
     "lint": "standard"
   }
 }
