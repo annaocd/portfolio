@@ -57,6 +57,6 @@ if (process.env.NODE_ENV !== 'production') {
   })
 } else {
   app.listen(process.env.PORT || 3000, function (err) {
-    console.log('Listening on Production')
+    console.log('Express server listening on port ' + process.env.PORT)
   })
 }
