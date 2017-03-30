@@ -54,8 +54,9 @@ if (process.env.NODE_ENV !== 'production') {
           console.log(err)
           return
       }
-      console.log('Listening at http://0.0.0.0:3000')
   })
 } else {
-  app.listen(process.env.PORT || 3000)
+  app.listen(process.env.PORT || 3000, function (err) {
+    console.log('Listening on Production')
+  })
 }
