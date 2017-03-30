@@ -27,7 +27,7 @@
     "redux": "^3.5.2",
     "redux-logger": "^2.4.0",
     "redux-thunk": "^1.0.3",
-    "webpack": "^1.12.10",
+    "webpack": "^1.12.10"
   },
   "devDependencies": {
     "animated-scroll-to": "^1.0.1",
