@@ -13,7 +13,7 @@ var router = express.Router()
 
 app.set('port', (process.env.PORT || 3000))
 
-console.log('NODE_ENV: ', process.env.NODE_ENV, '  PORT: ' process.env.PORT)
+console.log('NODE_ENV: ', process.env.NODE_ENV, '  PORT: ', process.env.PORT)
 
 app.use(morgan('combined'))
 app.use(express.static('/static'))
