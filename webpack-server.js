@@ -4,7 +4,6 @@ var webpack = require('webpack')
 var webpackDevMiddleware = require('webpack-dev-middleware')
 var webpackHotMiddleware = require('webpack-hot-middleware')
 var morgan = require('morgan')
-var http = require('http')
 var config = process.env.NODE_ENV === 'production' ? require('./webpack.prod.config') : require('./webpack.dev.config')
 
 var app = express()
