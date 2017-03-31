@@ -1,6 +1,5 @@
 import React from 'react'
 import { Router, Route, IndexRoute, browserHistory } from 'react-router'
-import animateScrollTo from 'animated-scroll-to'
 
 import App from './containers/App'
 import Home from './containers/Home'
@@ -12,12 +11,6 @@ import DemoSlider from './containers/DemoSlider'
 
 browserHistory.listen((ev) => {
   window.scrollTo(0,0)
-  // const options = {
-  //   speed: 200,
-  //   maxDuration: 500,
-  //   cancelOnUserAction: true
-  // }
-  // animateScrollTo(0, options);
 })
 
 const routes = (
