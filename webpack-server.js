@@ -4,6 +4,7 @@ var webpack = require('webpack')
 var webpackDevMiddleware = require('webpack-dev-middleware')
 var webpackHotMiddleware = require('webpack-hot-middleware')
 var morgan = require('morgan')
+var http = require('http')
 var config = process.env.NODE_ENV === 'production' ? require('./webpack.prod.config') : require('./webpack.dev.config')
 
 var app = express()
@@ -11,6 +12,8 @@ var compiler = webpack(config)
 var router = express.Router()
 
 app.set('port', (process.env.PORT || 3000))
+
+console.log('NODE_ENV: ', process.env.NODE_ENV, '  PORT: ' process.env.PORT)
 
 app.use(morgan('combined'))
 app.use(express.static('/static'))
@@ -25,33 +28,39 @@ if (process.env.NODE_ENV !== 'production') {
   app.use(webpackHotMiddleware(compiler))
 }
 
-app.use(function(req, res, next) {
-    if (req.get('content-type') === 'application/json') {
-      req.headers.accept = 'application/json'
-    }
+// app.use(function(req, res, next) {
+//     if (req.get('content-type') === 'application/json') {
+//       req.headers.accept = 'application/json'
+//     }
+//
+//     res.header('Access-Control-Allow-Origin', '*')
+//     res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept')
+//     next()
+// });
 
-    res.header('Access-Control-Allow-Origin', '*')
-    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept')
-    next()
-});
+// app.get('*', function(req, res) {
+//   res.format({
+//     'text/html': function (){
+//       res.sendFile(path.join(__dirname, 'project/templates/index.html'))
+//     },
+//     'application/json': function (){
+//       res.sendFile(path.join(__dirname, 'project' + req.originalUrl))
+//     },
+//     'default': function () {
+//       // log the request and respond with 406
+//       res.status(406).send('Response format is not acceptable');
+//     }
+//   })
+// })
 
-app.get('*', function(req, res) {
-  res.format({
-    'text/html': function (){
-      res.sendFile(path.join(__dirname, 'project/templates/index.html'))
-    },
-    'application/json': function (){
-      res.sendFile(path.join(__dirname, 'project' + req.originalUrl))
-    },
-    'default': function () {
-      // log the request and respond with 406
-      res.status(406).send('Response format is not acceptable');
-    }
-  })
-})
-
-if (process.env.NODE_ENV !== 'production') {
-  app.listen(app.get('port'), '0.0.0.0')
+if (process.env.NODE_ENV === 'production') {
+  console.log('before listening port: ', app.get('port'))
+  http.createServer(app).listen(app.get('port'))
 } else {
-  app.listen(app.get('port'))
+  app.listen(app.get('port'), '0.0.0.0', function (err) {
+    if (err) {
+      debug(err)
+    }
+    console.log('listening on port: ', app.get('port'))
+  })
 }
