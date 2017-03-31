@@ -3,12 +3,14 @@ var express = require('express')
 var webpack = require('webpack')
 var webpackDevMiddleware = require('webpack-dev-middleware')
 var webpackHotMiddleware = require('webpack-hot-middleware')
-var config = require('./webpack.dev.config')
 var morgan = require('morgan')
+var config = process.env.NODE_ENV === 'production' ? require('./webpack.prod.config') : require('./webpack.dev.config')
 
 var app = express()
 var compiler = webpack(config)
 var router = express.Router()
+
+app.set('port', (process.env.PORT || 3000))
 
 app.use(morgan('combined'))
 app.use(express.static('/static'))
@@ -49,14 +51,7 @@ app.get('*', function(req, res) {
 })
 
 if (process.env.NODE_ENV !== 'production') {
-  app.listen(3000, '0.0.0.0', function(err) {
-      if (err) {
-          console.log(err)
-          return
-      }
-  })
+  app.listen(app.get('port'), '0.0.0.0')
 } else {
-  app.listen(process.env.PORT || 3000, function (err) {
-    console.log('Express server listening on port ' + process.env.PORT)
-  })
+  app.listen(app.get('port'))
 }
