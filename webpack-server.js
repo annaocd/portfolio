@@ -13,8 +13,6 @@ var router = express.Router()
 
 app.set('port', (process.env.PORT || 3000))
 
-console.log('NODE_ENV: ', process.env.NODE_ENV, '  PORT: ', process.env.PORT)
-
 app.use(morgan('combined'))
 app.use(express.static('/static'))
 app.use(express.static('/data'))
@@ -54,13 +52,17 @@ if (process.env.NODE_ENV !== 'production') {
 // })
 
 if (process.env.NODE_ENV === 'production') {
-  console.log('before listening port: ', app.get('port'))
-  http.createServer(app).listen(app.get('port'))
+  http.createServer(app).listen(app.get('port'), function (err) {
+    if (err) {
+      debug(err)
+    }
+    console.log(process.env.NODE_ENV, ' listening on port: ', app.get('port'))
+  })
 } else {
   app.listen(app.get('port'), '0.0.0.0', function (err) {
     if (err) {
       debug(err)
     }
-    console.log('listening on port: ', app.get('port'))
+    console.log(process.env.NODE_ENV, ' listening on port: ', app.get('port'))
   })
 }
