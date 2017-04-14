@@ -19,8 +19,8 @@
     @include press-start-2p;
     font-size: 192px;
     text-transform: uppercase;
-    //text-shadow: 411px 0px 0px #fbe9f6;
     text-shadow: 8px -8px rebeccapurple;
+    text-indent: -8px;
     letter-spacing: -47px;
     white-space: nowrap;
     display: inline-block;
@@ -52,7 +52,7 @@
 
     &:before {
       content: 'ann';
-      left: -69%;
+      left: -71%;
       transform: translateY(0) scale(0.7);
       z-index: 1;
     }
