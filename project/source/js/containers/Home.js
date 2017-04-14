@@ -54,10 +54,8 @@ class Home extends Component {
             <ul className='content-list'>
               <InView className='content-list__item' pageY={this.props.pageY}>
                 <h3><a href='http://wgnamerica.com' target='_blank'>WGN America</a></h3>
-                <div>
                 <p>I led a team of internal and remote developers to overhaul the existing WGN site with a modular, responsive, and modern experience.</p>
                 <p>As the lead front-end developer, I defined routes, models, layouts, and component architecture for the site.</p>
-                </div>
                 <ul className='tag-list'>
                   <li className="tag-list__item">Ember</li>
                   <li className="tag-list__item">Sass</li>
