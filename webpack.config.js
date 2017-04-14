@@ -10,8 +10,8 @@ const ENV_IS_PRODUCTION = NODE_ENV === 'production'
 const DEBUG = !ENV_IS_PRODUCTION
 
 const PATHS = {
-  static: path.join(__dirname, '/project/static'),
-  src: path.join(__dirname, '/project/source')
+  public: path.join(__dirname, '/project/public'),
+  source: path.join(__dirname, '/project/source')
 }
 
 const COPY_PATHS = [{
@@ -29,7 +29,7 @@ const WEBPACK_ENV = {
 }
 
 module.exports = {
-  context: PATHS.src,
+  context: PATHS.source,
   debug: DEBUG,
   devtool: null,
   target: 'web',
@@ -44,9 +44,8 @@ module.exports = {
   },
 
   output: {
-    path: PATHS.static,
-    filename: 'js/[name].js',
-    publicPath: '/static/'
+    path: PATHS.public,
+    filename: 'js/[name].js'
   },
 
   module: {
