@@ -49,6 +49,7 @@ function createWebpackPlugins () {
   return plugins
 }
 
+config.devtool = 'cheap-module-source-map'
 config.module.loaders.push(...createWebpackLoaders())
 config.plugins.push(...createWebpackPlugins())
 module.exports = config
