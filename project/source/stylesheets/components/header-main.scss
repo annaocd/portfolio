@@ -9,7 +9,7 @@
   left: 10px;
   z-index: 1;
   transform: translateY(-107px);
-  transition: transform 500ms 100ms cubic-bezier(.81,.71,.06,.95);
+  transition: transform 300ms cubic-bezier(.56,.53,.41,.91);
 
   &.top {
     transform: translateY(-30px);
@@ -68,7 +68,7 @@
 
   a {
     color: #fbe9f6;
-    
+
     &:before,
     &:after {
       display: none;
