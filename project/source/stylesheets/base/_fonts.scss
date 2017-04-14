@@ -12,10 +12,10 @@
   font-family: 'Roboto', sans-serif;
 }
 
+@mixin codystar {
+  font-family: 'Codystar', cursive;
 }
 
-@mixin bungee-inline {
-  font-family: 'Codystar', cursive;
 @mixin press-start-2p {
   font-family: 'Press Start 2P', cursive;
 }
