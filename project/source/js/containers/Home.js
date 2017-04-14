@@ -16,15 +16,8 @@ import img_typical from '../../assets/img/typical.jpg'
 import img_bomb from '../../assets/img/bomb.jpg'
 
 class Home extends Component {
-
     constructor(props) {
       super(props)
-
-      this.state = {
-        position: 0
-      }
-
-      this.onScroll = this.onScroll.bind(this)
     }
 
     getClassNames () {
@@ -37,22 +30,6 @@ class Home extends Component {
       return cx(classes, { fetching: isFetching })
     }
 
-    onScroll (e) {
-      this.setState({
-  			//position: this.getPosition(),
-        pageY: window.pageYOffset
-  		})
-    }
-
-    componentDidMount () {
-      window.addEventListener('scroll', this.onScroll)
-    }
-
-    componentWillUnmount () {
-      window.removeEventListener('scroll', this.onScroll)
-    }
-
-    //<Greeting />
     render () {
       const defaultStyles = [1,2,3,4].map(() => { return  { y: 0 } })
       const nextStyles = (previousStyles) => {
@@ -78,7 +55,7 @@ class Home extends Component {
           <section>
             <h2>Recent Work</h2>
             <ul className='content-list'>
-              <InView className='content-list__item' pageY={this.state.pageY}>
+              <InView className='content-list__item' pageY={this.props.pageY}>
                 <h3><a href='http://wgnamerica.com' target='_blank'>WGN America</a></h3>
                 <div>
                 <p>I led a team of internal and remote developers to overhaul the existing WGN site with a modular, responsive, and modern experience.</p>
@@ -91,7 +68,7 @@ class Home extends Component {
                   <li className="tag-list__item clear-left">Python+Django</li>
                 </ul>
               </InView>
-              <InView className='content-list__item' pageY={this.state.pageY}>
+              <InView className='content-list__item' pageY={this.props.pageY}>
                 <h3><a href='http://socialsf.ferrari.com/' target='_blank'>Ferrari</a></h3>
                 <p>I was the lead front-end developer for this responsive game-ified social aggregator built on a tight 6 week (3 sprint) deadline.</p>
                 <p>As the first React+Redux+Webpack site built for production at RED Interactive, it required constructive debate, rapid testing, and decisiveness. It served as the first edition of a new front-end stack and boilerplate.</p>
@@ -102,9 +79,9 @@ class Home extends Component {
                   <li className="tag-list__item clear-left">Python+Django</li>
                 </ul>
               </InView>
-              <InView className='content-list__item' pageY={this.state.pageY}>
-                <h3><a href='http://pechanga.com' target='_blank'>Pechanga</a></h3>
-                <p>Pechanga Resort &amp; Casino needed a flexible layout and component system to accomodate their large breadth of variable content.</p>
+              <InView className='content-list__item' pageY={this.props.pageY}>
+                <h3><a href='http://pechanga.com' target='_blank'>Pechanga Resort &amp; Casino</a></h3>
+                <p>Pechanga needed a flexible layout and component system to accomodate their large breadth of variable content.</p>
                 <p>I built the responsive layout, component system, and interactive styleguide; then oversaw post-launch feature development.</p>
                 <ul className='tag-list'>
                   <li className="tag-list__item">Ember</li>
@@ -113,9 +90,10 @@ class Home extends Component {
                   <li className="tag-list__item clear-left">Python+Django</li>
                 </ul>
               </InView>
-              <InView className='content-list__item' pageY={this.state.pageY}>
+              <InView className='content-list__item' pageY={this.props.pageY}>
                 <h3><a href='http://jdate.com' target='_blank'>Spark Networks (JDate)</a></h3>
-                <p>I contributed as a front-end lead across two sprints, completing the feature-rich Browse and Activity sections.</p>
+                <p>We worked with Spark Networks developers to adapt the legacy API to a completely redesigned front-end. I joined the dev team as a front-end lead during two sprints (of many) and UAT.</p>
+                <p>I was responsible for building the flexible and feature-rich 'Browse' and 'Your Activity' sections of the site.</p>
                 <ul className='tag-list'>
                   <li className="tag-list__item">Ember</li>
                   <li className="tag-list__item">Sass</li>
@@ -123,9 +101,10 @@ class Home extends Component {
                   <li className="tag-list__item clear-left">AEM</li>
                 </ul>
               </InView>
-              <InView className='content-list__item' pageY={this.state.pageY}>
+              <InView className='content-list__item' pageY={this.props.pageY}>
                 <h3><a href='http://worldcupessentials.ff0000.com/team/ger' target='_blank'>World Cup Essentials</a></h3>
-                <p></p>
+                <p>ESPN needed a site to showcase World Cup history, team details, and match updates.</p>
+                <p>As one of two front-end developers on the project, I was responsible for building the responsive layout, modular component system, and model architecture.</p>
                 <ul className='tag-list'>
                   <li className="tag-list__item">Ember</li>
                   <li className="tag-list__item">Sass</li>
@@ -133,7 +112,7 @@ class Home extends Component {
                   <li className="tag-list__item clear-left">Python+Django</li>
                 </ul>
               </InView>
-              <InView className='content-list__item' pageY={this.state.pageY}>
+              <InView className='content-list__item' pageY={this.props.pageY}>
                 <h3><a href='http://battletrain.lionel.com/' target='_blank'>Lionel Battletrain</a></h3>
                 <p>This cute microsite for the Lionel Battletrain game was my first project at RED Interactive.</p>
                 <p>I created a responsive and adaptive experience with custom parallax and audio-synced animation sequence.</p>

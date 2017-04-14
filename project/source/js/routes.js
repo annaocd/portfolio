@@ -16,7 +16,7 @@ browserHistory.listen((ev) => {
 const routes = (
   <Router history={browserHistory}>
     <Route path='/' component={App}>
-      <IndexRoute component={Home} />
+      <IndexRoute component={Home} bindScroll={true} />
       <Route path='/squares' component={DemoSquares} />
       <Route path='slider' component={DemoSlider} />
       <Route path='/cv' component={CV} />

@@ -13,8 +13,25 @@ class App extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      isModal: false
+      isModal: false,
+      pageY: 0
     }
+
+    this.onScroll = this.onScroll.bind(this)
+  }
+
+  onScroll (e) {
+    this.setState({
+      pageY: window.pageYOffset
+    })
+  }
+
+  componentDidMount () {
+    window.addEventListener('scroll', this.onScroll)
+  }
+
+  componentWillUnmount () {
+    window.removeEventListener('scroll', this.onScroll)
   }
 
   componentWillReceiveProps(nextProps) {
@@ -38,6 +55,7 @@ class App extends Component {
     const { location, children } = this.props
     const { isModal } = this.state
     const containerClassName = location.pathname === '/' ? 'home' : ''
+    const pageY = this.props.children.props.route.bindScroll ? this.state.pageY : null
 
     let classes = {
         name: 'app-container',
@@ -46,7 +64,7 @@ class App extends Component {
 
     return (
       <div className={cx(classes, { page: containerClassName })}>
-        <HeaderMain />
+        <HeaderMain isTop={this.state.pageY === 0} />
         <ReactCSSTransitionGroup
           component="div"
           className="page-container"
@@ -56,7 +74,8 @@ class App extends Component {
           transitionAppear={true}
           transitionAppearTimeout={1000}>
           {React.cloneElement(children, {
-            key: location.pathname
+            key: location.pathname,
+            pageY: pageY
           })}
         </ReactCSSTransitionGroup>
 
