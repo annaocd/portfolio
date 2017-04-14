@@ -91,11 +91,11 @@ function createWebpackLoaders () {
   }, {
     test: /\.json$/,
     loader: 'json',
-    include: path.join(PATHS.src, 'data')
+    include: path.join(PATHS.source, 'data')
   }, {
     test: /\.(pdf|txt)$/,
     loader: 'file',
-    include: path.join(PATHS.src, 'docs')
+    include: path.join(PATHS.source, 'docs')
   }]
 
   return loaders
