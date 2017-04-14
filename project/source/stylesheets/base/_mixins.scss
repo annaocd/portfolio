@@ -11,6 +11,7 @@
 @mixin icon-link($type: 'open_in_new', $align-left: false) {
   $padding: 20px;
   position: relative;
+  display: inline-block;
 
   @if ($align-left) {
     padding-left: $padding;
