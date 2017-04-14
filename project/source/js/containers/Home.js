@@ -39,14 +39,14 @@ class Home extends Component {
         <div className={ this.getClassNames() }>
           <section className='section-intro'>
             <div className='column column--content'>
-              <p>{"I'm"} Anna <em className='em-special'>(AN-uh)</em> Yovandich <em className='em-special'>(YO-von-ditch)</em></p>
-              <p>I love discussing, designing, and developing flexible and intuitive user experiences.</p>
-              <p>Since my first taste of web programming as a highschool elective, I have immersed myself in pixels, lines, boxes, gestures, attributes, functions, and semantics &mdash; satiating my gluttony for both punishment and delight.</p>
-              <p>{"I'm"} at my best when {"I'm"} creating with code and collaborating with clever cohorts.</p>
+              <p className='text-xlarge'>{"I'm"} Anna <em className='em-special'>(AN-uh)</em> Yovandich <em className='em-special'>(YO-von-ditch)</em></p>
+              <p className='text-large'>I love discussing, designing, and developing flexible and intuitive user experiences.</p>
+              <p className='text-large'>Since my first taste of web programming as a highschool elective, I have immersed myself in pixels, lines, boxes, attributes, properties, functions, and semantics &mdash; satiating my gluttony for both punishment and delight.</p>
+              <p className='text-large'>{"I'm"} at my best when {"I'm"} creating with code and collaborating with clever cohorts.</p>
               <ModalLink component={Resume}>Resume <i className='material-icons'>filter_none</i></ModalLink>
             </div>
             <figure className='column column--image'>
-              <img src={img_bomb} alt='annalien' />
+              <img src={img_bomb} alt="Anna's face blocked by cat head" />
             </figure>
           </section>
           <section>
