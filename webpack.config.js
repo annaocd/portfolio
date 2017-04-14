@@ -3,7 +3,7 @@ const webpack = require('webpack')
 const autoprefixer = require('autoprefixer')
 
 const CopyWebpackPlugin = require('copy-webpack-plugin')
-const DefinePlugin = webpack.DefinePlugin
+const EnvironmentPlugin = webpack.EnvironmentPlugin
 
 const NODE_ENV = getEnvVar('NODE_ENV', 'development')
 const ENV_IS_PRODUCTION = NODE_ENV === 'production'
@@ -104,7 +104,7 @@ function createWebpackLoaders () {
 
 function createWebpackPlugins () {
   const plugins = [
-    new DefinePlugin({ 'process.env': WEBPACK_ENV }),
+    new EnvironmentPlugin(['NODE_ENV']),
     new CopyWebpackPlugin(COPY_PATHS)
   ]
 
