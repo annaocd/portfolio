@@ -8,7 +8,7 @@
     }
 
     section {
-      margin-bottom: 40px;
+      margin-bottom: 20px;
     }
 
     .bulleted-list__item {
@@ -21,7 +21,7 @@
 
   .resume__header-main {
     text-align: left;
-    padding: 10px;
+    padding: 0;
     position: relative;
 
     h1,
@@ -47,6 +47,9 @@
       margin: 0 10px 5px 0;
       float: right;
       text-decoration: none;
+      left: auto;
+      transform: none;
+      clear: none;
 
       &:after {
         color: #fbe9f6;
