@@ -14,13 +14,13 @@
 Thumbs.db
 
 # Folders to ignore
-.static
+project/public
 
 # npm
 node_modules
 
 # Webpack
-.webpack-stats
+webpack-stats\.json
 
 # Sass
 .sass-cache
