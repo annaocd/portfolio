@@ -5,14 +5,11 @@ import { Link } from 'react-router'
 import cx from 'bem-classnames'
 import * as actions from '../state/modules/modal'
 
-import { Motion, spring, StaggeredMotion } from 'react-motion'
 import Resume from '../components/Resume'
 import InView from '../components/InView'
 import ModalLink from '../components/ModalLink'
 
 import '../../stylesheets/components/home.scss'
-import img_annalien from '../../assets/img/annalien.jpg'
-import img_typical from '../../assets/img/typical.jpg'
 import img_bomb from '../../assets/img/bomb.jpg'
 
 class Home extends Component {
