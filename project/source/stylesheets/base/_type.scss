@@ -1,8 +1,7 @@
 body {
   @include inconsolata;
-  //@include arvo;
   font-size: 16px;
-  color: #fbf9fb; //#3c3120;
+  color: #fbf9fb;
 }
 
 h2,
@@ -17,7 +16,7 @@ h2 {
   font-weight: normal;
   font-size: 20px;
   letter-spacing: 3px;
-  color: #f4ddf7; //#fefbf8;
+  color: #f4ddf7;
   background-color: #3c3120;
 }
 
@@ -32,18 +31,17 @@ h3 {
 button,
 .button {
   @include inconsolata;
-  //@include arvo;
   font-size: 16px;
 }
 
 a {
   text-decoration: none;
-  color: #eff9ae;//#39d6b4;
+  color: #eff9ae;
   position: relative;
   border-bottom: 1px solid transparent;
 
   &:before {
-    background-color: #eff9ae;//53eaa0
+    background-color: #eff9ae;
     content: '';
     height: 1px;
     width: 100%;
@@ -56,14 +54,6 @@ a {
     transform-style: preserve-3d;
   }
 
-  &:visited {
-    //color: #5832a5;//#41b97e;
-
-    &:before {
-      //background-color: #5832a5;
-    }
-  }
-
   &:hover {
 
     &:before {
@@ -71,14 +61,14 @@ a {
       transform: scale(1);
     }
   }
+}
 
-  &[target='_blank'] {
-    @include icon-link($type: 'open_in_new');
-  }
+.external-link {
+  @include icon-link($type: 'open_in_new');
+}
 
-  // &:not([target]) {
-  //   @include icon-link-hover($type: 'arrow_forward');
-  // }
+.internal-link {
+  @include icon-link-hover($type: 'arrow_forward');
 }
 
 .text-xlarge {
@@ -86,7 +76,7 @@ a {
 }
 
 .text-large {
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .text-medium {
