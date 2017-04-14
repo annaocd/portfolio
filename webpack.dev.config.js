@@ -10,10 +10,6 @@ const HotModuleReplacementPlugin = webpack.HotModuleReplacementPlugin
 const NoErrorsPlugin = webpack.NoErrorsPlugin
 const ProvidePlugin = webpack.ProvidePlugin
 
-function defineWebpackDevtool () {
-  return ENV_IS_PRODUCTION ? null : 'cheap-source-map'
-}
-
 function createWebpackLoaders () {
   const loaders = [{
       test: /\.js?/,
@@ -56,7 +52,7 @@ function createWebpackPlugins () {
   return plugins
 }
 
-config.devtool = 'cheap-source-map'
+config.devtool = 'eval'
 config.module.loaders.push(...createWebpackLoaders())
 config.plugins.push(...createWebpackPlugins())
 
