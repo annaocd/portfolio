@@ -9,4 +9,4 @@ else
     PORT=''
 fi
 
-$NODE $BASEDIR/webpack-server.js $PORT
+$NODE $BASEDIR/server.js $PORT
