@@ -28,6 +28,17 @@ const WEBPACK_ENV = {
   DEBUG: JSON.stringify(DEBUG)
 }
 
+const WEBPACK_ENTRY = ENV_IS_PRODUCTION ? [
+    'babel-polyfill',
+    './js/init'
+] : [
+    'babel-polyfill',
+    'eventsource-polyfill',
+    'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000',
+    './js/init'
+]
+
+
 module.exports = {
   context: PATHS.source,
   debug: DEBUG,
@@ -35,12 +46,7 @@ module.exports = {
   target: 'web',
 
   entry: {
-    main: [
-        'babel-polyfill',
-        'eventsource-polyfill',
-        'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000',
-        './js/init'
-    ]
+    main: WEBPACK_ENTRY
   },
 
   output: {
