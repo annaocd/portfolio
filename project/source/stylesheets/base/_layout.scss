@@ -57,47 +57,6 @@ ul {
 .app-container {
   padding: 0 0 20px;
   position: relative;
-
-  &:before,
-  &:after {
-    content: '';
-    background-color: #aea8bb;
-    position: fixed;
-    width: calc(100% + 15px);
-    opacity: .7;
-    transition: transform 500ms 100ms;
-  }
-
-  &:before {
-    left: -26px;
-    top: -107px;
-    z-index: 1;
-    transform: rotate(-4.25deg);
-    height: 145px;
-  }
-
-  &:after {
-    left: 0;
-    top: -100px;
-    z-index: 0;
-    transform: rotate(3.25deg);
-    height: 115px;
-  }
-
-  &.app-container--home {
-
-    &:before {
-      left: -26px;
-      top: -110px;
-      transform: rotate(-9.25deg);
-    }
-
-    &:after {
-      left: 0;
-      top: -147px;
-      transform: rotate(10.25deg);
-    }
-  }
 }
 
 .page-container {
