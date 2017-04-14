@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Inconsolata|Roboto+Condensed|Roboto:700|Arvo|Codystar|Material+Icons');
+@import url('https://fonts.googleapis.com/css?family=Inconsolata|Roboto+Condensed|Roboto:700|Codystar|Material+Icons|Press+Start+2P');
 
 @mixin inconsolata {
   font-family: 'Inconsolata', monospace;
@@ -12,12 +12,12 @@
   font-family: 'Roboto', sans-serif;
 }
 
-@mixin arvo {
-  font-family: 'Arvo', serif;
 }
 
 @mixin bungee-inline {
   font-family: 'Codystar', cursive;
+@mixin press-start-2p {
+  font-family: 'Press Start 2P', cursive;
 }
 
 @mixin material-icons {
