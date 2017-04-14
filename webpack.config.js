@@ -86,7 +86,8 @@ function createWebpackLoaders () {
     loader: 'file'
   }, {
     test: /\.(jpg|png)$/,
-    loader: 'file'
+    loader: 'file?name=[path][name].[ext]',
+    include: path.join(PATHS.source, 'assets')
   }, {
     test: /\.json$/,
     loader: 'json',
