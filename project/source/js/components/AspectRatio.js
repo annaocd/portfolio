@@ -4,7 +4,7 @@ import '../../stylesheets/components/aspect-ratio.scss'
 
 function AspectRatio (props) {
   let classes = {
-      name: 'aspect-ratio',
+      name: 'aspect-ratio ' + props.className,
       states: ['absolute', 'exiting', 'pressed']
   }
 
