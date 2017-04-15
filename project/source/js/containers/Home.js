@@ -8,6 +8,7 @@ import * as actions from '../state/modules/modal'
 import Resume from '../components/Resume'
 import InView from '../components/InView'
 import ModalLink from '../components/ModalLink'
+import AspectRatio from '../components/AspectRatio'
 
 import '../../stylesheets/components/home.scss'
 import img_bomb from '../../assets/img/bomb.jpg'
@@ -38,16 +39,14 @@ class Home extends Component {
       return (
         <div className={ this.getClassNames() }>
           <section className='section-intro'>
+            <AspectRatio ratio={75.06} image={img_bomb} className='column column--image' />
             <div className='column column--content'>
               <p className='text-xlarge'>{"I'm"} Anna <em className='em-special'>(AN-uh)</em> Yovandich <em className='em-special'>(YO-von-ditch)</em></p>
               <p className='text-large'>I love discussing, designing, and developing flexible and intuitive user experiences.</p>
-              <p className='text-large'>Since my first taste of web programming as a highschool elective, I have immersed myself in pixels, lines, boxes, attributes, properties, functions, and semantics &mdash; satiating my gluttony for both punishment and delight.</p>
+              <p className='text-large'>Since my first taste of web programming as a highschool elective, I have immersed my brain in pixels, lines, boxes, attributes, properties, functions, and semantics &mdash; satiating my gluttony for both punishment and delight.</p>
               <p className='text-large'>{"I'm"} at my best when {"I'm"} creating with code and collaborating with clever cohorts.</p>
               <ModalLink component={Resume}>Resume <i className='material-icons'>filter_none</i></ModalLink>
             </div>
-            <figure className='column column--image'>
-              <img src={img_bomb} alt="Anna's face blocked by cat head" />
-            </figure>
           </section>
           <section>
             <h2>Recent Work</h2>
