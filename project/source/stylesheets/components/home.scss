@@ -17,23 +17,24 @@
   }
 
   .column {
-    align-self: flex-start;
   }
 
   .column--content {
-    margin-right: 5%;
     text-align: justify;
-    width: 110%; // why?
+    width: 100%;
   }
 
   .column--image {
-    @include border-shadow;
+    //@include border-shadow;
+    border: 2px solid #fbe9f6;
     font-size: 0;
     line-height: 0;
+    margin-right: 2%;
+    width: 60%;
+    min-width: 300px;
 
     img {
       filter: grayscale(50%);
-      //animation: hue-rotate 2000ms infinite alternate;
     }
   }
 }
@@ -44,5 +45,10 @@
 
   p {
     text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
+
+    &:last-of-type {
+      border-bottom: 2px solid #fbe9f6;
+      padding-bottom: 34px;
+    }
   }
 }
