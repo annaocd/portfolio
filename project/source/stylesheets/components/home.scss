@@ -14,6 +14,11 @@
   .section-intro {
     @include flex-container;
     flex-wrap: nowrap;
+
+    .button,
+    button {
+      margin-right: 20px;
+    }
   }
 
   .column {
@@ -22,10 +27,6 @@
   .column--content {
     text-align: justify;
     width: 100%;
-
-    .button, button {
-      margin-right: 20px;
-    }
   }
 
   .column--image {
