@@ -18,6 +18,14 @@ class Modal extends Component {
     this.state = {
       isOpen: false
     }
+
+    this.onKeyUp = this.onKeyUp.bind(this)
+  }
+
+  onKeyUp (e) {
+    if (e.keyCode === 27) {
+      this.close()
+    }
   }
 
   close () {
@@ -33,6 +41,12 @@ class Modal extends Component {
       document.body.classList.add('has-modal')
       this.setState({ isOpen: true })
     }, 10)
+
+    window.addEventListener('keyup', this.onKeyUp)
+  }
+
+  componentWillUnmount () {
+    window.removeEventListener('keyup', this.onKeyUp, false)
   }
 
   render () {
