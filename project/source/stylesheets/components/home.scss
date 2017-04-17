@@ -22,6 +22,10 @@
   .column--content {
     text-align: justify;
     width: 100%;
+
+    .button, button {
+      margin-right: 20px;
+    }
   }
 
   .column--image {
