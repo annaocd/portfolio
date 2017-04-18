@@ -16,7 +16,7 @@ class ModalLink extends Component {
 
     render () {
       return (
-        <button onClick={this.onClick}>
+        <button onClick={this.onClick} title='opens modal'>
           {this.props.children}
         </button>
       )
