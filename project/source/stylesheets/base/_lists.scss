@@ -60,6 +60,7 @@
   padding: 20px 50px 70px 3%;
   background-color: rgba(184, 176, 198, 0.5);
   position: relative;
+  transform-style: preserve-3d;
   transition: transform 400ms;
 
   &:before,
