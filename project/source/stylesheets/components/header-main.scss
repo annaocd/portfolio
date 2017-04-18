@@ -1,4 +1,6 @@
+@import '../base/vars';
 @import '../base/fonts';
+@import '../base/mixins';
 
 .header-main {
   text-align: center;
@@ -92,6 +94,29 @@
       &:after {
         transform: translateY(-20px) scale(0.7);
       }
+    }
+  }
+}
+
+@media screen and (max-width: $bp-small) {
+
+  .header-main {
+    top: -25px;
+
+    h1 {
+      font-size: 135px;
+      letter-spacing: -33px;
+      text-shadow: 6px -6px #867f97;
+      text-indent: -6px;
+
+      &:before,
+      &:after {
+        top: 2px;
+      }
+    }
+
+    i {
+      letter-spacing: -53px;
     }
   }
 }
