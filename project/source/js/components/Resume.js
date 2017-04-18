@@ -34,6 +34,7 @@ function Resume (props) {
         <h2>UI Developer</h2>
         <a className='email-link' href='mailto:anna.yovandich@gmail.com'>anna.yovandich@gmail.com</a>
         <a className='phone-link' href='tel:3109934362'>310-993-4362</a>
+        <a className='button' href='../../assets/docs/resume.pdf' download title='download pdf'><i className='material-icons'>file_download</i></a>
       </header>
       <section className='resume__section resume__section--purpose'>
         <h2 className='resume__heading resume__heading--purpose'>Purpose</h2>
