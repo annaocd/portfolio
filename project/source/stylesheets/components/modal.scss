@@ -39,16 +39,24 @@
 }
 
 .modal__button--close {
+  border: none;
+  box-shadow: none;
+  background-color: transparent;
   position: fixed;
   right: 40px;
-  top: 20px;
+  top: 10px;
   width: 60px;
   height: 50px;
-  font-size: 26px;
   line-height: 0;
+  padding: 0;
+  transition: color 200ms;
 
   .material-icons {
-    font-size: 20px;
+    font-size: 36px;
   }
 
+  &:hover {
+    text-shadow: none;
+    color: #eff9ae;
+  }
 }
