@@ -70,3 +70,17 @@ ul {
     @include codystar;
   }
 }
+
+@media screen and (max-width: $bp-large) {
+
+  .page-container {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: $bp-small) {
+
+  body {
+    padding-top: 100px;
+  }
+}
