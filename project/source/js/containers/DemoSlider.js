@@ -11,6 +11,9 @@ class DemoSlider extends Component {
       <div className='page-content demo demo--slider'>
         <h2>Slider</h2>
         <div className='project'>
+          <div className='project__demo'>
+            <Slider />
+          </div>
           <div className='project__info'>
             <p>I built this simple slider to mimic the slidey OSX preview pane and to try-out <a href='https://github.com/chenglou/react-motion' target='_blank'>react-motion</a>.</p>
             <p>Changes in mouseX (relative to the component element) are used to tween the transform property of a stateful style object. The <a href='https://github.com/chenglou/react-motion/tree/master/demos/demo8-draggable-list' target='_blank'>draggable list demo</a> provided helpful guidance for this mechanic.</p>
@@ -23,9 +26,6 @@ class DemoSlider extends Component {
               <TodoItem>Item nav</TodoItem>
               <TodoItem>Fullscreen mode</TodoItem>
             </TodoList>
-          </div>
-          <div className='project__demo'>
-            <Slider />
           </div>
         </div>
       </div>

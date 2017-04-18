@@ -10,6 +10,9 @@ class DemoSquares extends Component {
       <div className='page-content demo demo--squares'>
         <h2>Squares</h2>
         <div className='project'>
+          <div className='project__demo'>
+            <Squares />
+          </div>
           <div className='project__info'>
             <p>Squares is a game to play when you and a friend are super bored and want to competitively connect dots. I made this experiment to sharpen my SVG skills and to tryout the <a href='http://snapsvg.io/' target='_blank'>Snap.svg</a> library.</p>
             <h3>Directions:</h3>
@@ -21,9 +24,6 @@ class DemoSquares extends Component {
               <TodoItem>Square fill &amp; winner animation</TodoItem>
               <TodoItem>Automated player</TodoItem>
             </TodoList>
-          </div>
-          <div className='project__demo'>
-            <Squares />
           </div>
         </div>
       </div>
