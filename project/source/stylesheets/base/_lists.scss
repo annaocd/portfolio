@@ -83,7 +83,7 @@
   }
 
   &:after {
-    transition: opacity 300ms 200ms, transform 900ms;
+    transition: opacity 300ms 200ms, transform 700ms;
   }
 
   &.hover {
@@ -100,7 +100,7 @@
     }
 
     &:after {
-      transition: opacity 200ms, transform 400ms;
+      transition: opacity 200ms, transform 600ms;
     }
   }
 }
