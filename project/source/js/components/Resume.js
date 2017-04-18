@@ -4,6 +4,7 @@ import { Link } from 'react-router'
 import DateRange from './DateRange'
 
 import '../../stylesheets/components/resume.scss'
+import '../../stylesheets/components/resume--print.scss'
 
 function Resume (props) {
   //<li>Conducted interviews and skills assessments of all front-end candidates</li>
