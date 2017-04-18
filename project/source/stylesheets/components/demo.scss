@@ -12,15 +12,33 @@
 .project__info {
   width: 40%;
   margin-right: 50px;
+  order: 1;
 }
 
 .project__demo {
+  @include border;
   flex-grow: 1;
+  order: 2;
   padding: 40px;
   background: rgba(203, 195, 218, 0.38);
-  box-shadow: 2px 2px 0px #3c3120;
 
   .demo--slider & {
     padding: 0;
+  }
+}
+
+@media screen and (max-width: $bp-small) {
+
+  .project {
+    display: block;
+  }
+
+  .project__info,
+  .project__demo {
+    width: 100%;
+  }
+
+  .project__demo {
+    margin-bottom: 20px;
   }
 }
