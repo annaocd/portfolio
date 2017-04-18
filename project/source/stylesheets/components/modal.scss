@@ -60,3 +60,20 @@
     color: #eff9ae;
   }
 }
+
+@media screen and (max-width: $bp-small) {
+
+  .modal {
+    padding: 0;
+  }
+
+  .modal__content {
+    width: 100%;
+  }
+
+  .modal__button--close {
+    color: #eff9ae;
+    right: -10px;
+    top: 0px;
+  }
+}
