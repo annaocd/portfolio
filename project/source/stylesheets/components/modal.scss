@@ -1,3 +1,7 @@
+@import '../base/vars';
+@import '../base/fonts';
+@import '../base/mixins';
+
 .modal {
   background: rgba(75, 77, 99, 0.9);
   position: fixed;
