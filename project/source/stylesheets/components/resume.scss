@@ -229,28 +229,17 @@
 
 .resume__section--education {
 
-  ul {
-    @include microfix;
-    //@include flex-container;
-  }
-
-  li {
-    //flex-grow: 1;
-    float: left;
-    width: 50%;
-
-    &:not(:last-child) {
-      border-right: 2px solid #aea8bb;
-      padding-right: 20px;
-      margin-right: 20px;
-      width: calc(50% - 20px);
-    }
-  }
-
   header {
     border: none;
     padding-bottom: 0;
     margin-bottom: 4px;
+  }
+
+  .resume__timeframe {
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
   }
 }
 
