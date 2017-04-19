@@ -56,3 +56,17 @@
     }
   }
 }
+
+@media screen and (max-width: $bp-small) {
+
+  .home {
+
+    .section-intro {
+      display: block;
+    }
+
+    .column--image {
+      display: none;
+    }
+  }
+}
