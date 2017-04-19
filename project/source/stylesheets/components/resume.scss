@@ -106,6 +106,12 @@
     @include icon-link($type: 'email', $align-left: true);
     margin-bottom: 4px;
   }
+
+  .button {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+  }
 }
 
 .resume__heading {
