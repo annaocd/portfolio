@@ -80,11 +80,11 @@
 
   // transition-out
   &:before {
-    transition: opacity 300ms 200ms, transform 1800ms;
+    transition: opacity 500ms 200ms, transform 1800ms;
   }
 
   &:after {
-    transition: opacity 300ms 200ms, transform 700ms;
+    transition: opacity 500ms 200ms, transform 500ms;
   }
 
   &.active {
@@ -92,7 +92,7 @@
     &:before,
     &:after {
       transform: translate3d(-50%, -50%, 0) scale(1);
-      opacity: .06;
+      opacity: .05;
     }
 
     // transition-in
