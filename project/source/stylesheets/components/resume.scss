@@ -263,7 +263,7 @@
   }
 }
 
-@media (max-width: $bp-small) {
+@media screen and (max-width: $bp-small) {
 
   .resume__timeframe {
 
