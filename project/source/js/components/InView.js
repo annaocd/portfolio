@@ -41,11 +41,11 @@ class InView extends Component {
     const { isActive, style } = this.state
     let classes = {
         name: this.props.className,
-        state: ['hover']
+        state: ['active']
     }
 
     return (
-      <li className={cx(classes, { hover: isActive })} style={style} ref='elem'>
+      <li className={cx(classes, { active: isActive })} style={style} ref='elem'>
         {this.props.children}
       </li>
     )
