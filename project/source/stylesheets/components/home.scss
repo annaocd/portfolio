@@ -31,16 +31,28 @@
 }
 
 .section-intro {
+  @include flex-container;
+  flex-wrap: nowrap;
   text-align: justify;
   padding: 40px 0;
 
+  .button,
+  button {
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
   p {
     text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
+  }
 
-    &:last-of-type {
-      border-bottom: 2px solid #fbe9f6;
-      padding-bottom: 34px;
-    }
+  footer {
+    border-top: 2px solid #fbe9f6;
+    margin-top: 34px;
+    padding-top: 15px;
+    text-align: center;
   }
 }
 
