@@ -13,19 +13,6 @@
     bottom: 20px;
   }
 
-  .section-intro {
-    @include flex-container;
-    flex-wrap: nowrap;
-
-    .button,
-    button {
-      margin-right: 20px;
-    }
-  }
-
-  .column {
-  }
-
   .column--content {
     text-align: justify;
     width: 100%;
