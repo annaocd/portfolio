@@ -55,7 +55,7 @@ class Home extends Component {
             <h2>Recent Work</h2>
             <ul className='project-list'>
               <InView className='project-list__item' pageY={this.props.pageY}>
-                <h3><a href='http://wgnamerica.com' target='_blank'>WGN America</a></h3>
+                <h3><a href='http://wgnamerica.com' className='external-link'>WGN America</a></h3>
                 <p>I led a team of internal and remote developers to overhaul the existing WGN site with a modular, responsive, and modern experience.</p>
                 <p>As the lead front-end developer, I defined routes, models, layouts, and component architecture for the site.</p>
                 <ul className='tag-list'>
@@ -66,7 +66,7 @@ class Home extends Component {
                 </ul>
               </InView>
               <InView className='project-list__item' pageY={this.props.pageY}>
-                <h3><a href='http://socialsf.ferrari.com/' target='_blank'>Ferrari</a></h3>
+                <h3><a href='http://socialsf.ferrari.com/' className='external-link'>Ferrari</a></h3>
                 <p>I was the lead front-end developer for this responsive game-ified social aggregator built on a tight 6 week (3 sprint) deadline.</p>
                 <p>As the first React+Redux+Webpack site built for production at RED Interactive, it required constructive debate, rapid testing, and decisiveness. It served as the first edition of a new front-end stack and boilerplate.</p>
                 <ul className='tag-list'>
@@ -77,7 +77,7 @@ class Home extends Component {
                 </ul>
               </InView>
               <InView className='project-list__item' pageY={this.props.pageY}>
-                <h3><a href='http://pechanga.com' target='_blank'>Pechanga Resort &amp; Casino</a></h3>
+                <h3><a href='http://pechanga.com' className='external-link'>Pechanga Resort &amp; Casino</a></h3>
                 <p>Pechanga needed a flexible layout and component system to accomodate their large breadth of variable content.</p>
                 <p>I built the responsive layout, component system, and interactive styleguide; then oversaw post-launch feature development.</p>
                 <ul className='tag-list'>
@@ -88,9 +88,9 @@ class Home extends Component {
                 </ul>
               </InView>
               <InView className='project-list__item' pageY={this.props.pageY}>
-                <h3><a href='http://jdate.com' target='_blank'>Spark Networks (JDate)</a></h3>
+                <h3><a href='http://jdate.com' className='external-link'>Spark Networks (JDate)</a></h3>
                 <p>We worked with Spark Networks developers to adapt the legacy API to a completely redesigned front-end. I joined the dev team as a front-end lead during two sprints (of many) and UAT.</p>
-                <p>I was responsible for building the flexible and feature-rich 'Browse' and 'Your Activity' sections of the site.</p>
+                <p>I was responsible for building the feature-rich 'Browse' and 'Your Activity' sections of the site.</p>
                 <ul className='tag-list'>
                   <li className="tag-list__item">Ember</li>
                   <li className="tag-list__item">Sass</li>
@@ -99,7 +99,7 @@ class Home extends Component {
                 </ul>
               </InView>
               <InView className='project-list__item' pageY={this.props.pageY}>
-                <h3><a href='http://worldcupessentials.ff0000.com/team/ger' target='_blank'>World Cup Essentials</a></h3>
+                <h3><a href='http://worldcupessentials.ff0000.com' className='external-link'>World Cup Essentials</a></h3>
                 <p>ESPN needed a site to showcase World Cup history, team details, and match updates.</p>
                 <p>As one of two front-end developers on the project, I was responsible for building the responsive layout, modular component system, and model architecture.</p>
                 <ul className='tag-list'>
@@ -118,7 +118,7 @@ class Home extends Component {
             </ul>
             <ul className='box-list'>
               <li className='box-list__item'>
-                <h3><Link to='/squares'>Squares</Link></h3>
+                <h3><Link to='/squares' className='internal-link'>Squares</Link></h3>
                 <ul>
                   <li className="tag-list__item">React</li>
                   <li className="tag-list__item">Snap.svg</li>
@@ -126,7 +126,7 @@ class Home extends Component {
                 </ul>
               </li>
               <li className='box-list__item'>
-                <h3><Link to='/slider'>Slider</Link></h3>
+                <h3><Link to='/slider' className='internal-link'>Slider</Link></h3>
                 <ul>
                   <li className="tag-list__item">React</li>
                   <li className="tag-list__item">React-Motion</li>
