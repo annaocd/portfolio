@@ -45,8 +45,10 @@ class Home extends Component {
               <p className='text-large'>I love discussing, designing, and developing flexible and intuitive user experiences.</p>
               <p className='text-large'>Since my first taste of web programming as a highschool elective, I have immersed my brain in pixels, lines, boxes, attributes, properties, functions, and semantics &mdash; satiating my gluttony for both punishment and delight.</p>
               <p className='text-large'>{"I'm"} at my best when {"I'm"} creating with code and collaborating with clever cohorts.</p>
-              <ModalLink component={Resume}>resume <i className='material-icons'>filter_none</i></ModalLink>
-              <a href='https://github.com/annayo' className='button' target='_blank' title='opens new tab'>github <i className='material-icons'>launch</i></a>
+              <footer>
+                <ModalLink component={Resume}>resume <i className='material-icons'>filter_none</i></ModalLink>
+                <a href='https://github.com/annayo' className='button'>github <i className='material-icons'>launch</i></a>
+              </footer>
             </div>
           </section>
           <section>
