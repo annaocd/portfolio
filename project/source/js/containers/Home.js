@@ -90,7 +90,7 @@ class Home extends Component {
               <InView className='project-list__item' pageY={this.props.pageY}>
                 <h3><a href='http://jdate.com' className='external-link'>Spark Networks (JDate)</a></h3>
                 <p>We worked with Spark Networks developers to adapt the legacy API to a completely redesigned front-end. I joined the dev team as a front-end lead during two sprints (of many) and UAT.</p>
-                <p>I was responsible for building the feature-rich 'Browse' and 'Your Activity' sections of the site.</p>
+                <p>I was responsible for building a complex search interface, stateful list pagination, and preference management for the 'Browse' and 'Your Activity' sections of the site.</p>
                 <ul className='tag-list'>
                   <li className="tag-list__item">Ember</li>
                   <li className="tag-list__item">Sass</li>
