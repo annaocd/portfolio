@@ -107,16 +107,6 @@ class Home extends Component {
                   <li className="tag-list__item clear-left">Python+Django</li>
                 </ul>
               </InView>
-              <InView className='project-list__item' pageY={this.props.pageY}>
-                <h3><a href='http://battletrain.lionel.com/' target='_blank'>Lionel Battletrain</a></h3>
-                <p>This cute microsite for the Lionel Battletrain game was my first project at RED Interactive.</p>
-                <p>I created a responsive and adaptive experience with custom parallax and audio-synced animation sequence.</p>
-                <ul className='tag-list'>
-                  <li className="tag-list__item">jQuery</li>
-                  <li className="tag-list__item">Sass</li>
-                  <li className="tag-list__item">Grunt</li>
-                </ul>
-              </InView>
             </ul>
           </section>
           <section>
