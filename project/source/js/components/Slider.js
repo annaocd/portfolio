@@ -77,11 +77,66 @@ class Slider extends Component {
     // ommitted from state to prevent state updates during render
     this.motionX = 0
 
-    this.onMouseMove = this.onMouseMove.bind(this)
-    this.onMouseUp = this.onMouseUp.bind(this)
     this.onResize = this.onResize.bind(this)
     this.onMouseMove = this.onMouseMove.bind(this)
     this.onMouseUp = this.onMouseUp.bind(this)
+    this.onMouseDown = this.onMouseDown.bind(this)
+    this.onTouchMove = this.onTouchMove.bind(this)
+  }
+
+  getStyle (i, motion) {
+    const { mouseX, posOfLastPressed, width } = this.state
+
+    const next = posOfLastPressed === this.content.length - 1 ? 0 : posOfLastPressed + 1
+    const prev = posOfLastPressed === 0 ? this.content.length - 1 : posOfLastPressed - 1
+
+    let style = {
+      transform: `translate(${motion.x}px, 0)`,
+    }
+
+    if (i === posOfLastPressed) {
+
+      if (motion.x > width - 1 || motion.x < -(width - 1)) {
+        style = Object.assign(style, {
+          transform: `translate(0px, 0)`,
+          zIndex: ''
+        })
+      } else {
+        style = Object.assign(style, {
+          zIndex: this.content.length
+        })
+      }
+
+      this.motionX = motion.x
+
+    } else if (i === next && this.motionX < 0 || i === prev && this.motionX > 0) {
+      style = Object.assign(style, {
+        zIndex: this.content.length - 1
+      })
+    }
+
+    return style
+  }
+
+  getMotionStyle (i) {
+    const { posOfLastPressed, mouseX } = this.state
+    let style = {
+      x: 0
+    }
+
+    if (i === posOfLastPressed) {
+      style = {
+        x: spring(mouseX, springConfig)
+      }
+    }
+
+    return style
+  }
+
+  onResize () {
+    setTimeout(function () {
+      this.setState({ width: this.refs.slider.offsetWidth })
+    }.bind(this), 0)
   }
 
   onMouseMove ({pageX}) {
@@ -136,61 +191,10 @@ class Slider extends Component {
     })
   }
 
-  getStyle (i, motion) {
-    const { mouseX, posOfLastPressed, width } = this.state
-
-    const next = posOfLastPressed === this.content.length - 1 ? 0 : posOfLastPressed + 1
-    const prev = posOfLastPressed === 0 ? this.content.length - 1 : posOfLastPressed - 1
-
-    let style = {
-      transform: `translate(${motion.x}px, 0)`,
-    }
-
-    if (i === posOfLastPressed) {
-
-      if (motion.x > width - 1 || motion.x < -(width - 1)) {
-        style = Object.assign(style, {
-          transform: `translate(0px, 0)`,
-          zIndex: ''
-        })
-      } else {
-        style = Object.assign(style, {
-          zIndex: this.content.length
-        })
-      }
-
-      this.motionX = motion.x
-
-    } else if (i === next && this.motionX < 0 || i === prev && this.motionX > 0) {
-      style = Object.assign(style, {
-        zIndex: this.content.length - 1
-      })
-    }
-
-    return style
-  }
-
-  getMotionStyle (i) {
-    const { posOfLastPressed, mouseX } = this.state
-    let style = {
-      x: 0
-    }
-
-    if (i === posOfLastPressed) {
-      style = {
-        x: spring(mouseX, springConfig)
-      }
-    }
-
-    return style
   onTouchStart(key, pressLocation, e) {
     this.onMouseDown(key, pressLocation, e.touches[0])
   }
 
-  onResize () {
-    setTimeout(function () {
-      this.setState({ width: this.refs.slider.offsetWidth })
-    }.bind(this), 0)
   onTouchMove(e) {
     e.preventDefault();
     this.onMouseMove(e.touches[0])
@@ -198,19 +202,19 @@ class Slider extends Component {
 
   componentDidMount () {
     this.onResize()
-    window.addEventListener('mousemove', this.onMouseMove)
-    window.addEventListener('mouseup', this.onMouseUp)
     window.addEventListener('resize', this.onResize)
     window.addEventListener('touchmove', this.onTouchMove)
     window.addEventListener('touchend', this.onMouseUp)
+    window.addEventListener('mousemove', this.onMouseMove)
+    window.addEventListener('mouseup', this.onMouseUp)
   }
 
   componentWillUnmount () {
-    window.removeEventListener('mousemove', this.onMouseMove, false)
-    window.removeEventListener('mouseup', this.onMouseUp, false)
     window.removeEventListener('resize', this.onResize, false)
     window.removeEventListener('touchmove', this.onMouseMove, false)
     window.removeEventListener('touchend', this.onMouseUp, false)
+    window.removeEventListener('mousemove', this.onMouseMove, false)
+    window.removeEventListener('mouseup', this.onMouseUp, false)
   }
 
   shouldComponentUpdate (prevProps, prevState) {
