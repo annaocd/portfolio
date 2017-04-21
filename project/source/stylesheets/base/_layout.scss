@@ -60,6 +60,7 @@ ul {
 
 .page-container {
   width: 80%;
+  max-width: $bp-xlarge;
   margin: auto;
   position: relative;
 }
