@@ -183,12 +183,17 @@ class Slider extends Component {
     }
 
     return style
+  onTouchStart(key, pressLocation, e) {
+    this.onMouseDown(key, pressLocation, e.touches[0])
   }
 
   onResize () {
     setTimeout(function () {
       this.setState({ width: this.refs.slider.offsetWidth })
     }.bind(this), 0)
+  onTouchMove(e) {
+    e.preventDefault();
+    this.onMouseMove(e.touches[0])
   }
 
   componentDidMount () {
@@ -196,7 +201,7 @@ class Slider extends Component {
     window.addEventListener('mousemove', this.onMouseMove)
     window.addEventListener('mouseup', this.onMouseUp)
     window.addEventListener('resize', this.onResize)
-    window.addEventListener('touchmove', this.onMouseMove)
+    window.addEventListener('touchmove', this.onTouchMove)
     window.addEventListener('touchend', this.onMouseUp)
   }
 
@@ -218,21 +223,24 @@ class Slider extends Component {
     return (
       <div className='slider' ref='slider' id='slider'>
         <ul className='slider__list'>
-          {this.content.map((item, i) =>
-            <Motion defaultStyle={{x: 0}} style={this.getMotionStyle(i)} key={i}>
-              {style =>
-                <SliderItem
-                  key={i}
-                  content={item}
-                  isPressed={activeItemIndex === i}
-                  isEntering={false}
-                  onMouseDown={this.onMouseDown.bind(this, i, style.x)}
-                  style={this.getStyle(i, style)}>
-                  <AspectRatio ratio={75.06} image={importSlides[i]} isAbsoluteParent={true} />
-                </SliderItem>
-              }
-            </Motion>
-          )}
+          {this.content.map((item, i) => {
+            return (
+              <Motion defaultStyle={{x: 0}} style={this.getMotionStyle(i)} key={i}>
+                {style =>
+                  <SliderItem
+                    key={i}
+                    content={item}
+                    isPressed={activeItemIndex === i}
+                    isEntering={false}
+                    onMouseDown={this.onMouseDown.bind(this, i, style.x)}
+                    onTouchStart={this.onTouchStart.bind(this, i, style.x)}
+                    style={this.getStyle(i, style)}>
+                    <AspectRatio ratio={75.06} image={importSlides[i]} isAbsoluteParent={true} />
+                  </SliderItem>
+                }
+              </Motion>
+            )
+          })}
         </ul>
       </div>
     )

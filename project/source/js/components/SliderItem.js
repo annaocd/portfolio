@@ -11,7 +11,8 @@ function SliderItem (props) {
     <li
       style={props.style}
       className={cx(classes, {entering: props.isEntering, exiting: props.isExiting, pressed: props.isPressed})}
-      onMouseDown={props.onMouseDown}>
+      onMouseDown={props.onMouseDown}
+      onTouchStart={props.onTouchStart}>
         {props.children}
     </li>
   )
