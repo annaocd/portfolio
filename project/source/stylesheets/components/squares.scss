@@ -40,10 +40,10 @@ circle {
     @include material-icons;
     content: 'arrow_drop_up';
     text-shadow: 0px -5px 0px #fff;
-    font-size: 100px;
+    font-size: 80px;
     line-height: 9px;
     position: absolute;
-    bottom: -2px;
+    bottom: -4px;
     left: 50%;
     opacity: 0;
     transform: translate(-50%, 10px);
@@ -67,7 +67,7 @@ circle {
   display: block;
   width: 70px;
   margin: 0 auto 10px;
-  font-size: 30px;
+  font-size: 25px;
   font-weight: bold;
 }
 
