@@ -29,20 +29,21 @@ circle {
 }
 
 .player-list__item {
+
   flex-grow: 1;
   text-align: center;
-  padding: 0 0 20px;
+  padding: 0 0 25px;
   position: relative;
   overflow: hidden;
 
   &:after {
     @include material-icons;
     content: 'arrow_drop_up';
-    text-shadow: 0px -3px 0px #fff;
-    font-size: 85px;
+    text-shadow: 0px -5px 0px #fff;
+    font-size: 100px;
     line-height: 9px;
     position: absolute;
-    bottom: -4px;
+    bottom: -2px;
     left: 50%;
     opacity: 0;
     transform: translate(-50%, 10px);
@@ -59,8 +60,6 @@ circle {
       opacity: 1;
       transform: translate(-50%, 0);
     }
-
-    //animation: pulse 800ms infinite;
   }
 }
 
@@ -68,15 +67,12 @@ circle {
   display: block;
   width: 70px;
   margin: 0 auto 10px;
-  font-size: 20px;
+  font-size: 30px;
   font-weight: bold;
-
-  .is-turn & {
-    //animation: blink 800ms infinite;
-  }
 }
 
 .player-item__total {
+  @include press-start-2p;
   color: #fff;
   font-size: 24px;
 
