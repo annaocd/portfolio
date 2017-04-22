@@ -476,16 +476,6 @@ class Squares extends Component {
     })
   }
 
-  // --- lifecycle events --- //
-  // shouldComponentUpdate (nextProps, nextState) {
-  //   return this.state.points !== nextState.points ||
-  //     this.state.selectedPoints !== nextState.selectedPoints ||
-  //     this.state.lines.length !== nextState.lines.length ||
-  //     this.state.totalSquareCount !== nextState.totalSquareCount ||
-  //     this.state.currentPlayerIndex !== nextState.currentPlayerIndex ||
-  //     this.state.players.length !== nextState.players.length
-  // }
-
   componentDidUpdate (prevProps, prevState) {
     const { selectedPoints, totalSquareCount } = this.state
 
