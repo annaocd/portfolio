@@ -525,8 +525,8 @@ class Squares extends Component {
         </svg>
         <ul className='player-list'>
           {players.map((player, i) =>
-            <li className={currentPlayerIndex === i ? `player-list__item is-turn` : `player-list__item`} key={i}>
-              <span className='player-item__symbol' style={{color: player.color}} >{player.symbol}</span>
+            <li className={currentPlayerIndex === i ? `player-list__item is-turn` : `player-list__item`} style={{color: player.color}} key={i}>
+              <span className='player-item__symbol'>{player.symbol}</span>
               <span className='player-item__total'>{player.totalSquareCount}</span>
             </li>
           )}
