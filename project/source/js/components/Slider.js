@@ -196,7 +196,6 @@ class Slider extends Component {
   }
 
   onTouchMove(e) {
-    e.preventDefault();
     this.onMouseMove(e.touches[0])
   }
 
