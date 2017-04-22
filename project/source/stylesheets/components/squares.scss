@@ -74,7 +74,7 @@ circle {
 .player-item__total {
   @include press-start-2p;
   color: #fff;
-  font-size: 24px;
+  font-size: 20px;
 
   .is-turn & {
     font-weight: bold;
