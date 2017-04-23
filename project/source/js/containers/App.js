@@ -64,7 +64,7 @@ class App extends Component {
 
     return (
       <div className={cx(classes, { page: containerClassName })}>
-        <HeaderMain isTop={this.state.pageY <= 10} />
+        <HeaderMain isTop={this.state.pageY <= 10} currentPath={location.pathname} />
         <ReactCSSTransitionGroup
           component="div"
           className="page-container"
