@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router'
 import cx from 'bem-classnames'
 
+import Logo from './Logo'
 import '../../stylesheets/components/header-main.scss'
 
 function HeaderMain (props) {
@@ -12,12 +13,13 @@ function HeaderMain (props) {
 
   return (
     <header className={cx(classes, { top: props.isTop })}>
-    <Link to='/'>
-      <h1>
-        <span>а<i>n</i>na</span>
-        <span>Yovandich</span>
-      </h1>
-    </Link>
+      { props.currentPath === '/' ? (
+        <Logo />
+      ) : (
+        <Link to='/' title='home' className='header-main__link'>
+          <Logo />
+        </Link>
+      )}
     </header>
   )
 }
