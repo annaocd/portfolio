@@ -69,8 +69,8 @@ class App extends Component {
           component="div"
           className="page-container"
           transitionName="page-transition-"
-          transitionEnterTimeout={500}
-          transitionLeaveTimeout={300}
+          transitionEnterTimeout={1000}
+          transitionLeaveTimeout={1000}
           transitionAppear={true}
           transitionAppearTimeout={1000}>
           {React.cloneElement(children, {
