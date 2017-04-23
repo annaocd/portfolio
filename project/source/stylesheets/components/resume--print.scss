@@ -12,46 +12,44 @@
     }
 
     section {
-      margin-bottom: 20px;
+      margin-bottom: 35px;
     }
 
     .bulleted-list__item {
 
       &:before {
-        top: 1px;
+        top: 3px;
       }
     }
   }
 
   .resume__header-main {
-    text-align: left;
-    padding: 0;
+    padding: 0 0 0 10px;
+    margin-bottom: 20px;
     position: relative;
-
-    h1,
-    h2 {
-      display: inline-block;
-      float: left;
-    }
+    text-align: left;
 
     h1 {
       color: #fff;
-      font-size: 34px;
+      font-size: 38px;
+      font-weight: bold;
+      margin-bottom: 0;
     }
 
     h2 {
-      color: #f4ebf5;
-      font-size: 18px;
-      margin: 11px 0 0 10px;
+      color: #867f97;
+      font-size: 26px;
+      font-weight: bold;
+      margin-top: -5px;
     }
 
-    .phone-link,
-    .email-link {
+    .icon-text {
       font-size: 16px;
       margin: 0 10px 5px 0;
-      float: right;
+      float: none;
       text-decoration: none;
-      left: auto;
+      position: absolute;
+      right: 10px;
       transform: none;
       clear: none;
 
@@ -60,23 +58,41 @@
       }
     }
 
-    .phone-link {
-      @include icon-link($type: 'phone', $align-left: true);
-      clear: right;
+    .icon-text--email {
+      @include icon-link($type: 'email', $align-left: true);
+      top: 9px;
     }
 
-    .email-link {
-      @include icon-link($type: 'email', $align-left: true);
+    .icon-text--phone {
+      @include icon-link($type: 'phone', $align-left: true);
+      top: 27px;
+    }
+
+    .icon-text--home {
+      @include icon-link($type: 'home', $align-left: true);
+      top: 44px;
     }
   }
 
   .resume__heading {
-    @include roboto;
-    margin-bottom: 10px;
-    font-size: 18px;
+    padding: 0px 6px;
+    //margin-bottom: 15px;
+    color: #fff;
+    z-index: 0;
 
     &:before {
       top: 5px;
+    }
+
+    &:after {
+      content: '';
+      border-top: 32px solid #ebebeb;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
     }
   }
 
@@ -87,7 +103,6 @@
     }
 
     h3 {
-      @include roboto-condensed;
       font-size: 16px;
     }
 
@@ -119,18 +134,23 @@
     .bulleted-list {
       @include flex-container;
     }
+  }
 
-    .bulleted-list__item {
-      //flex-basis: 30%;
+  .resume__section--education {
 
-      // &:before {
-      //   @include material-icons;
-      //   content: 'change_history';
-      //   font-size: 10px;
-      //   margin-right: 3px;
-      //
-      //   transform: rotate(90deg);
-      // }
+    li {
+      float: none;
+      width: 100%;
+
+      &:not(:last-of-type) {
+        width: 100%;
+        margin-right: 0;
+        padding-right: 0;
+
+        &:after {
+          display: none;
+        }
+      }
     }
   }
 }
