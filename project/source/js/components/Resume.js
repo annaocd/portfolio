@@ -7,34 +7,14 @@ import '../../stylesheets/components/resume.scss'
 import '../../stylesheets/components/resume--print.scss'
 
 function Resume (props) {
-  //<li>Conducted interviews and skills assessments of all front-end candidates</li>
-  // <section>
-  //   <h2>Strengths</h2>
-  //   <ul>
-  //     <li>Calm</li>
-  //     <li>Pragmatic</li>
-  //     <li>Diligent</li>
-  //     <li>Communicative</li>
-  //     <li>Tenacious</li>
-  //   </ul>
-  // </section>
-  // <ul className='bulleted-list'>
-  //   <li className='bulleted-list__item'>HTML [semantics, accessibility]</li>
-  //   <li className='bulleted-list__item'>CSS [Sass, postcss, bem]</li>
-  //   <li className='bulleted-list__item'>JavaScript [ES6, Ember, React, Redux, Backbone, Node]</li>
-  //   <li className='bulleted-list__item'>Tooling [Grunt, Webpack, Yeoman]</li>
-  //   <li className='bulleted-list__item'>Version Control [Git, SVN]</li>
-  //   <li className='bulleted-list__item'>Browser and screen compatibility</li>
-  //   <li className='bulleted-list__item'>Data modeling and integration</li>
-  // </ul>
-  // <li className='bulleted-list__item'>Maintained and evolved front-end stack (tools, libraries, and practices) through research, debate, and prototyping</li>
   return (
     <div className='resume'>
       <header className='resume__header-main'>
         <h1>Anna Yovandich</h1>
-        <h2>UI Developer</h2>
-        <a className='email-link' href='mailto:anna.yovandich@gmail.com'>anna.yovandich@gmail.com</a>
-        <a className='phone-link' href='tel:3109934362'>310-993-4362</a>
+        <h2>Frontend Engineer</h2>
+        <a className='icon-text icon-text--email' href='mailto:anna.yovandich@gmail.com'>anna.yovandich@gmail.com</a>
+        <a className='icon-text icon-text--phone' href='tel:3109934362'>310-993-4362</a>
+        <span className='icon-text icon-text--home'>Portland</span>
         <a className='button' href='../../assets/docs/resume.pdf' download title='download pdf'><i className='material-icons'>file_download</i></a>
       </header>
       <section className='resume__section resume__section--purpose'>
@@ -45,15 +25,35 @@ function Resume (props) {
         <h2 className='resume__heading resume__heading--skills'>Skills</h2>
         <ul className='bulleted-list'>
           <li className='bulleted-list__item'>HTML</li>
-          <li className='bulleted-list__item'>CSS</li>
-          <li className='bulleted-list__item'>JavaScript</li>
-          <li className='bulleted-list__item'>Tooling</li>
-          <li className='bulleted-list__item'>Version Control</li>
+          <li className='bulleted-list__item'>CSS
+            <ul className='mini-list'>
+              <li className='mini-list__item'>SCSS</li>
+              <li className='mini-list__item'>SMACSS</li>
+              <li className='mini-list__item'>BEM</li>
+            </ul>
+          </li>
+          <li className='bulleted-list__item'>JavaScript
+            <ul className='mini-list'>
+              <li className='mini-list__item'>ES6</li>
+              <li className='mini-list__item'>React+Redux</li>
+              <li className='mini-list__item'>Ember</li>
+              <li className='mini-list__item'>Backbone</li>
+            </ul>
+          </li>
+          <li className='bulleted-list__item'>Tooling
+            <ul className='mini-list'>
+              <li className='mini-list__item'>Webpack</li>
+              <li className='mini-list__item'>Grunt</li>
+              <li className='mini-list__item'>Yeoman</li>
+            </ul>
+          </li>
+          <li className='bulleted-list__item'>Version control</li>
           <li className='bulleted-list__item'>Browser and screen compatibility</li>
           <li className='bulleted-list__item'>Data modeling and integration</li>
+          <li className='bulleted-list__item'>Accessibility</li>
         </ul>
       </section>
-      <section>
+      <section className='resume__section resume__section--experience'>
       <h2 className='resume__heading resume__heading--experience'>Experience</h2>
       <ul>
         <li className='resume__timeframe'>
@@ -63,14 +63,14 @@ function Resume (props) {
             <DateRange content={{ dateStart: 'May 2013', dateEnd: 'Dec 2016' }} />
           </header>
           <ul className='block-list'>
-            <li><DateRange content={{ dateStart: 'Oct. 2015', dateEnd: 'Dec. 2016'}} /><span>assoc director, front-end</span></li>
-            <li><DateRange content={{ dateStart: 'May 2013', dateEnd: 'Oct 2015' }} /><span>sr. front-end engineer</span></li>
+            <li><DateRange content={{ dateStart: 'Oct. 2015', dateEnd: 'Dec. 2016'}} /><span>assoc director, frontend engineering</span></li>
+            <li><DateRange content={{ dateStart: 'May 2013', dateEnd: 'Oct 2015' }} /><span>sr. frontend engineer</span></li>
           </ul>
           <ul className='bulleted-list'>
-            <li className='bulleted-list__item'>Evolved front-end stack through research, debate, and prototyping</li>
             <li className='bulleted-list__item'>Trained and mentored engineering team members through on-boarding and one-on-one sessions</li>
+            <li className='bulleted-list__item'>Evolved frontend stack through research, debate, and prototyping</li>
             <li className='bulleted-list__item'>Contributed on an internal RED product team (Scarlet and Ad Analytics)</li>
-            <li className='bulleted-list__item'>Built responsive, cross-browser, maintainable front-end architecture for a variety of client projects</li>
+            <li className='bulleted-list__item'>Built responsive, cross-browser, maintainable frontend architecture for a variety of client projects</li>
           </ul>
         </li>
         <li className='resume__timeframe'>
@@ -81,13 +81,13 @@ function Resume (props) {
           </header>
           <ul className='block-list'>
             <li><DateRange content={{ dateStart: 'Oct 2011', dateEnd: 'May 2013'}} /><span>architecture lead</span></li>
-            <li><DateRange content={{ dateStart: 'Jun 2010', dateEnd: 'Oct 2011' }} /><span>sr. front-end developer</span></li>
-            <li><DateRange content={{ dateStart: 'Nov 2008', dateEnd: 'Jun. 2010' }} /><span>front-end developer</span></li>
+            <li><DateRange content={{ dateStart: 'Jun 2010', dateEnd: 'Oct 2011' }} /><span>sr. frontend developer</span></li>
+            <li><DateRange content={{ dateStart: 'Nov 2008', dateEnd: 'Jun. 2010' }} /><span>frontend developer</span></li>
           </ul>
           <ul className='bulleted-list'>
-            <li className='bulleted-list__item'>Led front-end development on a world-wide Agile team for American Express OPEN Forum</li>
-            <li className='bulleted-list__item'>Helped define and promote best practices through code reviews, pair programming, and boilerplate/tooling evolvement</li>
-            <li className='bulleted-list__item'>Taught an 8 week interactive development course for Miami Ad School</li>
+            <li className='bulleted-list__item'>Led frontend development on a distributed Agile team for American Express OPEN Forum</li>
+            <li className='bulleted-list__item'>Defined and promoted best practices through code reviews, pair programming, and boilerplate/tooling evolvement</li>
+            <li className='bulleted-list__item'>Taught an 8 week Interactive Development course for Miami Ad School</li>
           </ul>
         </li>
         <li className='resume__timeframe'>
@@ -102,7 +102,8 @@ function Resume (props) {
           </ul>
           <ul className='bulleted-list'>
             <li className='bulleted-list__item'>Collaborated with a small multi-disciplinary interactive team from ideation to execution</li>
-            <li className='bulleted-list__item'>Delivered custom application and presentation layers for client web projects</li>
+            <li className='bulleted-list__item'>Translated client needs into application requirements and deliverables</li>
+            <li className='bulleted-list__item'>Implemented custom data, application, and presentation layers for client web projects</li>
           </ul>
         </li>
       </ul>
