@@ -80,22 +80,22 @@ function createWebpackLoaders () {
     loader: 'svg-sprite'
   }, {
     test: /\.(otf|ttf|eot|woff(2)?)(\?[a-z0-9]+)?$/,
-    loader: 'file'
+    loader: 'file?name=[path][name].[ext]'
   }, {
     test: /\.(ogg|mp?4a|mp3)$/,
-    loader: 'file'
+    loader: 'file?name=[path][name].[ext]'
   }, {
     test: /\.(jpg|png)$/,
     loader: 'file?name=[path][name].[ext]',
     include: path.join(PATHS.source, 'assets')
   }, {
+    test: /\.(pdf|txt)$/,
+    loader: 'file?name=[path][name].[ext]',
+    include: path.join(PATHS.source, 'docs')
+  }, {
     test: /\.json$/,
     loader: 'json',
     include: path.join(PATHS.source, 'data')
-  }, {
-    test: /\.(pdf|txt)$/,
-    loader: 'file',
-    include: path.join(PATHS.source, 'docs')
   }]
 
   return loaders
