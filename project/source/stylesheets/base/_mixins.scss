@@ -10,7 +10,6 @@
 
 @mixin icon-link($type: 'open_in_new', $align-left: false) {
   $padding: 20px;
-  position: relative;
   display: inline-block;
 
   @if ($align-left) {
@@ -90,8 +89,8 @@
   @include shadow;
 }
 
-@mixin border {
-  border: 2px solid #fbe9f6;
+@mixin border($color: #fbe9f6) {
+  border: 2px solid $color;
 }
 
 @mixin shadow () {
