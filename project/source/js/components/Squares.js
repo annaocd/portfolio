@@ -44,13 +44,13 @@ class Squares extends Component {
   createPlayers () {
     return [{
       name: 'slarp',
-      color: '#5deac6',
+      color: '#6cfff1',
       totalSquareCount: 0,
       symbol: 'P1'
     },
     {
       name: 'zobo',
-      color: '#fb65fb',
+      color: '#976cff',
       totalSquareCount: 0,
       symbol: 'P2'
     }]
@@ -520,6 +520,7 @@ class Squares extends Component {
               onMouseOver={this.onMouseOver.bind(this)}
               onMouseOut={this.onMouseOut.bind(this)}
               onClick={this.onClick.bind(this)}
+              style={{animationDelay: `${(i * 75)}ms`}}
              />
           )}
         </svg>

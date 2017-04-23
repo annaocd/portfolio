@@ -12,11 +12,13 @@ svg {
 
 circle {
   cursor: pointer;
+  opacity: 0;
+  animation: fade-in 150ms forwards ease-in;
 }
 
 // players
 .player-list {
-  border-bottom: 2px solid;
+  border-bottom: 4px solid;
   display: inline-block;
   list-style: none;
   position: relative;
@@ -50,7 +52,7 @@ circle {
   }
 
   &:not(:last-child) {
-    border-right: 2px solid #fff;
+    border-right: 4px solid #fff;
   }
 
   &.is-turn {
