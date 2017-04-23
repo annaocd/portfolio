@@ -1,0 +1,84 @@
+@import '../base/vars';
+@import '../base/fonts';
+@import '../base/mixins';
+
+.logo {
+  @include press-start-2p;
+  color: #fbe9f6;
+  font-size: 192px;
+  text-transform: uppercase;
+  text-shadow: 8px -8px #867f97;//#867aa2;
+  text-indent: -8px;
+  letter-spacing: -47px;
+  white-space: nowrap;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  height: 142px;
+  transform: rotate(-180deg);
+  transition: color 2000ms;
+
+  &:before,
+  &:after {
+    position: absolute;
+    top: 7px;
+    transform: translateY(0) scale(0.7);
+  }
+
+  &:before {
+    content: 'ann';
+    left: -71%;
+    transform: translateY(0) scale(0.7);
+    z-index: 1;
+  }
+
+  &:after {
+    content: 'nna';
+    right: -71%;
+    z-index: 2;
+  }
+
+  span {
+    position: relative;
+    z-index: 1;
+
+    &:last-of-type {
+      display: none;
+      position: relative;
+      top: -1px;
+      letter-spacing: -1px;
+      left: 49px;
+      transform: rotate(5.25deg);
+    }
+  }
+
+  i {
+    font-style: normal;
+    letter-spacing: -71px;
+  }
+
+  &:hover {
+    color: #f4ddf7;
+  }
+}
+
+@media screen and (max-width: $bp-small) {
+
+  .logo {
+    font-size: 135px;
+    letter-spacing: -33px;
+    text-shadow: 6px -6px #867f97;
+    text-indent: -6px;
+    position: relative;
+    left: -9px;
+
+    &:before,
+    &:after {
+      top: 2px;
+    }
+  }
+
+  i {
+    letter-spacing: -51px;
+  }
+}
