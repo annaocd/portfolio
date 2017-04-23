@@ -7,6 +7,7 @@ body {
 h2,
 h3 {
   text-transform: uppercase;
+  margin-top: 0;
 }
 
 h2 {
@@ -32,6 +33,11 @@ button,
 .button {
   @include inconsolata;
   font-size: 16px;
+}
+
+p {
+  line-height: 1.2em;
+  margin: 0 0 15px;
 }
 
 a {
@@ -64,15 +70,59 @@ a {
 }
 
 .external-link {
-  @include icon-link($type: 'open_in_new');
+  @include icon-link-hover($type: 'open_in_new');
 }
 
 .internal-link {
-  @include icon-link-hover($type: 'arrow_forward');
+  @include icon-link-hover($type: 'chevron_right');
+}
+
+.back-link {
+  @include icon-link($type: 'arrow_back');
+  padding-right: 0;
+  z-index: 2;
+
+  i,
+  &:after {
+    font-size: 31px;
+    transform: translateX(0);
+    transition: transform 200ms cubic-bezier(.56,.53,.41,.91);
+  }
+
+  &:before {
+    height: 3px;
+    position: absolute;
+    left: auto;
+    bottom: 17px;
+    right: 0;
+    transform: none;
+  }
+
+  &:after {
+    display: none;
+    left: -21px;
+    right: auto;
+    top: 0;
+    position: relative;
+    transition-delay: 50ms;
+    width: 100%;
+  }
+
+  &:hover {
+
+    &:before {
+      opacity: 1;
+    }
+
+    i,
+    &:after {
+      transform: translateX(-10px);
+    }
+  }
 }
 
 .text-xlarge {
-  font-size: 26px;
+  font-size: 30px;
 }
 
 .text-large {
@@ -87,8 +137,23 @@ a {
   font-style: normal;
   opacity: 0.3;
   text-shadow: none;
+  padding-left: 6px;
 }
 
 .material-icons {
   @include material-icons;
+}
+
+@media screen and (max-width: $bp-xlarge) {
+
+  .em-special {
+    font-size: 88%;
+  }
+}
+
+@media screen and (max-width: $bp-large) {
+
+  .em-special {
+    font-size: 77%;
+  }
 }
