@@ -43,7 +43,7 @@ class Home extends Component {
             <div className='column column--content'>
               <p className='text-xlarge'>Anna<em className='em-special'>(AN-uh)</em> Yovandich<em className='em-special'>(YO-von-ditch)</em></p>
               <p className='text-large'>Experienced Frontend Engineer</p>
-              <p className='text-large'>Builds sturdy, responsive, componetized interfaces through collaboration and iteration</p>
+              <p className='text-large'>Builds sturdy, responsive, componentized interfaces through collaboration and iteration</p>
               <p className='text-large'>Strives for improvement, learns with purpose, leads by example</p>
               <footer>
                 <ModalLink component={Resume}>resume <i className='material-icons'>filter_none</i></ModalLink>
