@@ -12,10 +12,12 @@
     }
 
     section {
-      margin-bottom: 35px;
+      margin-bottom: 30px;
     }
 
     .bulleted-list__item {
+      margin-bottom: 5px;
+      font-size: 13px;
 
       &:before {
         top: 3px;
@@ -25,33 +27,37 @@
 
   .resume__header-main {
     padding: 0 0 0 10px;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     position: relative;
     text-align: left;
+
+    h1,
+    h2 {
+      margin: -5px 0 0 -5px;
+    }
 
     h1 {
       color: #fff;
       font-size: 38px;
       font-weight: bold;
-      margin-bottom: 0;
     }
 
     h2 {
       color: #867f97;
       font-size: 26px;
       font-weight: bold;
-      margin-top: -5px;
     }
 
     .icon-text {
       font-size: 16px;
       margin: 0 10px 5px 0;
-      float: none;
       text-decoration: none;
       position: absolute;
+      left: auto;
       right: 10px;
       transform: none;
       clear: none;
+      text-align: right;
 
       &:after {
         color: #fbe9f6;
@@ -76,7 +82,7 @@
 
   .resume__heading {
     padding: 0px 6px;
-    //margin-bottom: 15px;
+    margin: 0 0 15px -10px;
     color: #fff;
     z-index: 0;
 
@@ -141,6 +147,7 @@
     li {
       float: none;
       width: 100%;
+      font-size: 13px;
 
       &:not(:last-of-type) {
         width: 100%;
