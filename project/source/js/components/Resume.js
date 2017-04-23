@@ -15,7 +15,7 @@ function Resume (props) {
         <a className='icon-text icon-text--email' href='mailto:anna.yovandich@gmail.com'>anna.yovandich@gmail.com</a>
         <a className='icon-text icon-text--phone' href='tel:3109934362'>310-993-4362</a>
         <span className='icon-text icon-text--home'>Portland</span>
-        <a className='button' href='../../assets/docs/resume.pdf' download title='download pdf'><i className='material-icons'>file_download</i></a>
+        <a className='button' href='../../assets/docs/resume-anna-yovandich.pdf' download title='download pdf'><i className='material-icons'>file_download</i></a>
       </header>
       <section className='resume__section resume__section--purpose'>
         <h2 className='resume__heading resume__heading--purpose'>Purpose</h2>
