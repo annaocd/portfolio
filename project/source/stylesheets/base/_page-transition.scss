@@ -14,7 +14,7 @@
   & > h2,
   & > div,
   & > section {
-    @content
+    @content;
   }
 }
 
