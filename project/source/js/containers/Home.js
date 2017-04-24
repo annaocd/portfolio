@@ -11,7 +11,7 @@ import ModalLink from '../components/ModalLink'
 import AspectRatio from '../components/AspectRatio'
 
 import '../../stylesheets/components/home.scss'
-import img_bomb from '../../assets/img/sasha.png'
+import img_bomb from '../../assets/img/bomb.jpg'
 
 class Home extends Component {
     constructor(props) {
