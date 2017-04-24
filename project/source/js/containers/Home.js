@@ -55,7 +55,7 @@ class Home extends Component {
             <h2>Recent Work</h2>
             <ul className='project-list'>
               <InView className='project-list__item' pageY={this.props.pageY}>
-                <h3><a href='http://socialsf.ferrari.com/' className='external-link'>Ferrari</a></h3>
+                <h3><a href='http://socialsf.ferrari.com/' target='_blank' className='external-link'>Ferrari</a></h3>
                 <p>I was lead frontend engineer for this responsive game-ified social aggregator built on a tight 6 week (3 sprint) deadline.</p>
                 <p>As the first React+Redux+Webpack site built for production at RED Interactive, it required constructive debate, rapid testing, and decisiveness. It served as the first edition of a new frontend stack and boilerplate.</p>
                 <ul className='tag-list'>
@@ -66,7 +66,7 @@ class Home extends Component {
                 </ul>
               </InView>
               <InView className='project-list__item' pageY={this.props.pageY}>
-                <h3><a href='http://pechanga.com' className='external-link'>Pechanga Resort &amp; Casino</a></h3>
+                <h3><a href='http://pechanga.com' target='_blank' className='external-link'>Pechanga Resort &amp; Casino</a></h3>
                 <p>Pechanga required a flexible layout and component system to accomodate their large breadth of variable content.</p>
                 <p>I built the responsive layout, component library, model architecture, and interactive styleguide; then oversaw post-launch feature development.</p>
                 <ul className='tag-list'>
@@ -77,7 +77,7 @@ class Home extends Component {
                 </ul>
               </InView>
               <InView className='project-list__item' pageY={this.props.pageY}>
-                <h3><a href='http://wgnamerica.com' className='external-link'>WGN America</a></h3>
+                <h3><a href='http://wgnamerica.com' target='_blank' className='external-link'>WGN America</a></h3>
                 <p>I led frontend development in collaboration with a remote team to overhaul the existing WGN site with a modular, responsive, and modern experience.</p>
                 <p>Working closely with UX and backend, I helped define routes, data structures, and naming conventions for a new REST API; while concurrently building frontend models, responsive layouts, and components for the site.</p>
                 <ul className='tag-list'>
@@ -88,7 +88,7 @@ class Home extends Component {
                 </ul>
               </InView>
               <InView className='project-list__item' pageY={this.props.pageY}>
-                <h3><a href='http://jdate.com' className='external-link'>Spark Networks (JDate)</a></h3>
+                <h3><a href='http://jdate.com' target='_blank' className='external-link'>Spark Networks (JDate)</a></h3>
                 <p>We worked with Spark Networks engineers to adapt a legacy API to a completely redesigned frontend. I joined the team as a frontend lead during three sprints, then spot-supporting when needed.</p>
                 <p>I was responsible for building the 'Browse' and 'Your Activity' sections of the site, featuring a robust search interface, stateful list pagination, and user-preference management.</p>
                 <ul className='tag-list'>
@@ -99,7 +99,7 @@ class Home extends Component {
                 </ul>
               </InView>
               <InView className='project-list__item' pageY={this.props.pageY}>
-                <h3><a href='http://worldcupessentials.ff0000.com' className='external-link'>World Cup Essentials</a></h3>
+                <h3><a href='http://worldcupessentials.ff0000.com' target='_blank' className='external-link'>World Cup Essentials</a></h3>
                 <p>ESPN needed a site to showcase World Cup history, team details, and match updates.</p>
                 <p>As one of two frontend developers on the project, I was responsible for building the responsive layout, component library, and model architecture.</p>
                 <ul className='tag-list'>
