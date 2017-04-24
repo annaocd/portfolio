@@ -255,8 +255,3 @@ Slider.propTypes = {
 }
 
 export default Slider
-
-// slide connected
-// const style = {
-//   transform: `translate(${(width*i)+mouseX}px, 0)`
-// }
