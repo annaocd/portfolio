@@ -39,7 +39,7 @@ class Home extends Component {
       return (
         <div className={ this.getClassNames() }>
           <section className='section-intro'>
-            <AspectRatio ratio={75.06} image={img_bomb} className='column column--image' />
+            <AspectRatio image={img_bomb} className='column column--image' />
             <div className='column column--content'>
               <p className='text-xlarge'>Anna<em className='em-special'>(AN-uh)</em> Yovandich<em className='em-special'>(YO-von-ditch)</em></p>
               <p className='text-large'>Experienced Frontend Engineer</p>
