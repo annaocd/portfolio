@@ -19,7 +19,7 @@ function Resume (props) {
       </header>
       <section className='resume__section resume__section--purpose'>
         <h2 className='resume__heading resume__heading--purpose'>Purpose</h2>
-        <p>To develop robust and intuitive web experiences that provide valuable services to users. To be a leader and a learner on a focused and collaborative team.</p>
+        <p>To develop robust and intuitive web applications that provide valuable services to users. To be a leader and a learner on a focused and collaborative team.</p>
       </section>
       <section className='resume__section resume__section--skills'>
         <h2 className='resume__heading resume__heading--skills'>Skills</h2>
@@ -69,7 +69,7 @@ function Resume (props) {
           <ul className='bulleted-list'>
             <li className='bulleted-list__item'>Trained and mentored engineering team members through on-boarding and one-on-one sessions</li>
             <li className='bulleted-list__item'>Evolved frontend stack through research, debate, and prototyping</li>
-            <li className='bulleted-list__item'>Contributed on an internal RED product team (Scarlet and Ad Analytics)</li>
+            <li className='bulleted-list__item'>Contributed to weekly ideation, maintenance, and feature development on RED products team</li>
             <li className='bulleted-list__item'>Built responsive, cross-browser, maintainable frontend architecture for a variety of client projects</li>
           </ul>
         </li>
