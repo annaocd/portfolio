@@ -13,8 +13,8 @@
 }
 
 .aspect-ratio__spacer {
+  content: '';
   display: block;
-  content: "";
   width: 100%;
 }
 
@@ -24,7 +24,6 @@
   left: 0;
   right: 0;
   bottom: 0;
-
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
