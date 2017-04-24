@@ -19,12 +19,18 @@
 }
 
 .page-transition--appear {
-  opacity: 0.01;
+
+  @include _hidden {
+    opacity: 0.01;
+  }
 }
 
 .page-transition--appear.page-transition--appear-active {
-  opacity: 1;
-  transition: opacity 400ms;
+
+  @include _hidden {
+    opacity: 1;
+    transition: opacity 500ms ease-in 100ms;
+  }
 }
 
 .page-transition--enter {
