@@ -19,7 +19,7 @@
     @include border;
     font-size: 0;
     line-height: 0;
-    width: 60%;
+    width: 50%;
     min-width: 300px;
     filter: grayscale(70%);
   }
@@ -60,7 +60,7 @@
 
   footer {
     border-top: 2px solid #fbe9f6;//#867f97;
-    margin-top: 34px;
+    margin-top: 25px;
     padding-top: 15px;
   }
 }
@@ -70,15 +70,22 @@
   .home {
 
     .section-intro {
-      padding: 20px 0;
+      padding: 0 0 20px;
       position: relative;
+      display: block;
+
+      p,
+      footer {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
     }
 
     .column--content {
+      padding-top: 15px;
     }
 
     .column--image {
-      //display: none;
       border: none;
       position: absolute;
       width: 100%;
