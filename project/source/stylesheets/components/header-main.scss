@@ -20,10 +20,19 @@
 
 .header-main__link {
   color: #fbe9f6;
+  transition: color 2000ms;
 
   &:before,
   &:after {
     display: none;
+  }
+
+  &:hover {
+
+    &,
+    h1 {
+      color: #f4ddf7;
+    }
   }
 }
 
