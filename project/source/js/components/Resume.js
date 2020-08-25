@@ -24,33 +24,19 @@ function Resume (props) {
       <section className='resume__section resume__section--skills'>
         <h2 className='resume__heading resume__heading--skills'>Skills</h2>
         <ul className='bulleted-list'>
-          <li className='bulleted-list__item'>HTML</li>
-          <li className='bulleted-list__item'>CSS
-            <ul className='mini-list'>
-              <li className='mini-list__item'>SCSS</li>
-              <li className='mini-list__item'>SMACSS</li>
-              <li className='mini-list__item'>BEM</li>
-            </ul>
-          </li>
-          <li className='bulleted-list__item'>JavaScript
-            <ul className='mini-list'>
-              <li className='mini-list__item'>ES6</li>
-              <li className='mini-list__item'>React+Redux</li>
-              <li className='mini-list__item'>Ember</li>
-              <li className='mini-list__item'>Backbone</li>
-            </ul>
-          </li>
-          <li className='bulleted-list__item'>Tooling
-            <ul className='mini-list'>
-              <li className='mini-list__item'>Webpack</li>
-              <li className='mini-list__item'>Grunt</li>
-              <li className='mini-list__item'>Yeoman</li>
-            </ul>
-          </li>
-          <li className='bulleted-list__item'>Version control</li>
+          <li className='bulleted-list__item'>Semantic HTML</li>
+          <li className='bulleted-list__item'>Modular CSS</li>
+          <li className='bulleted-list__item'>Modern JavaScript</li>
+          <li className='bulleted-list__item'>Wireframing and prototyping</li>
+          <li className='bulleted-list__item'>Accessibility compliance</li>
+          <li className='bulleted-list__item'>Usability testing</li>
           <li className='bulleted-list__item'>Browser and screen compatibility</li>
+          <li className='bulleted-list__item'>Performance optimization</li>
           <li className='bulleted-list__item'>Data modeling and integration</li>
-          <li className='bulleted-list__item'>Accessibility</li>
+          <li className='bulleted-list__item'>AWS management</li>
+          <li className='bulleted-list__item'>Webpack configuration</li>
+          <li className='bulleted-list__item'>Git proficiency</li>
+
         </ul>
       </section>
       <section className='resume__section resume__section--experience'>
