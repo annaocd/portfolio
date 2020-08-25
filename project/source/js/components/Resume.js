@@ -54,59 +54,76 @@ function Resume (props) {
         </ul>
       </section>
       <section className='resume__section resume__section--experience'>
-      <h2 className='resume__heading resume__heading--experience'>Experience</h2>
-      <ul>
-        <li className='resume__timeframe'>
-          <header>
-            <h3>RED Interactive</h3>
-            <h4>Santa Monica, CA</h4>
-            <DateRange content={{ dateStart: 'May 2013', dateEnd: 'Dec 2016' }} />
-          </header>
-          <ul className='block-list'>
-            <li><DateRange content={{ dateStart: 'Oct. 2015', dateEnd: 'Dec. 2016'}} /><span>assoc director, frontend engineering</span></li>
-            <li><DateRange content={{ dateStart: 'May 2013', dateEnd: 'Oct 2015' }} /><span>sr. frontend engineer</span></li>
-          </ul>
-          <ul className='bulleted-list'>
-            <li className='bulleted-list__item'>Trained and mentored engineering team members through on-boarding and one-on-one sessions</li>
-            <li className='bulleted-list__item'>Evolved frontend stack through research, debate, and prototyping</li>
-            <li className='bulleted-list__item'>Contributed to weekly ideation, maintenance, and feature development on RED products team</li>
-            <li className='bulleted-list__item'>Built responsive, cross-browser, maintainable frontend architecture for a variety of client projects</li>
-          </ul>
-        </li>
-        <li className='resume__timeframe'>
-          <header>
-            <h3>Crispin Porter + Bogusky</h3>
-            <h4>Boulder, CO</h4>
-            <DateRange content={{ dateStart: 'Nov 2008', dateEnd: 'May 2013' }} />
-          </header>
-          <ul className='block-list'>
-            <li><DateRange content={{ dateStart: 'Oct 2011', dateEnd: 'May 2013'}} /><span>architecture lead</span></li>
-            <li><DateRange content={{ dateStart: 'Jun 2010', dateEnd: 'Oct 2011' }} /><span>sr. frontend developer</span></li>
-            <li><DateRange content={{ dateStart: 'Nov 2008', dateEnd: 'Jun. 2010' }} /><span>frontend developer</span></li>
-          </ul>
-          <ul className='bulleted-list'>
-            <li className='bulleted-list__item'>Led frontend development on a distributed Agile team for American Express OPEN Forum</li>
-            <li className='bulleted-list__item'>Defined and promoted best practices through code reviews, pair programming, and boilerplate/tooling evolvement</li>
-            <li className='bulleted-list__item'>Taught an 8 week Interactive Development course for Miami Ad School</li>
-          </ul>
-        </li>
-        <li className='resume__timeframe'>
-          <header>
-            <h3>Atomicdust </h3>
-            <h4>St. Louis, MO</h4>
-            <DateRange content={{ dateStart: 'Dec 2005', dateEnd: 'Oct 2008' }} />
-          </header>
-          <ul className='block-list'>
-            <li><DateRange content={{ dateStart: 'Dec 2006', dateEnd: 'Oct 2008'}} /><span>interactive developer</span></li>
-            <li><DateRange content={{ dateStart: 'Dec 2005', dateEnd: 'Dec 2006' }} /><span>intern</span></li>
-          </ul>
-          <ul className='bulleted-list'>
-            <li className='bulleted-list__item'>Collaborated with a small multi-disciplinary interactive team from ideation to execution</li>
-            <li className='bulleted-list__item'>Translated client needs into application requirements and deliverables</li>
-            <li className='bulleted-list__item'>Implemented custom data, application, and presentation layers for client web projects</li>
-          </ul>
-        </li>
-      </ul>
+        <h2 className='resume__heading resume__heading--experience'>Experience</h2>
+        <ul>
+          <li className='resume__timeframe'>
+            <header>
+              <h3>Stackery</h3>
+              <h4>Portland, OR</h4>
+              <DateRange content={{ dateStart: 'Sep 2017' }} />
+            </header>
+            <ul className='block-list'>
+              <li><DateRange content={{ dateStart: 'Dec. 2019' }} /><span>lead engineer</span></li>
+              <li><DateRange content={{ dateStart: 'Sep. 2017', dateEnd: 'Dec. 2019' }} /><span>sr. engineer</span></li>
+            </ul>
+            <ul className='bulleted-list'>
+              <li className='bulleted-list__item'>Build and evolve frontend architecture from initial product launch</li>
+              <li className='bulleted-list__item'>Design, develop, and test user experience features and improvements</li>
+              <li className='bulleted-list__item'>Maintain code quality, patterns, and best practices of frontend codebase</li>
+              <li className='bulleted-list__item'>Lead a team to build and deploy weekly feature releases</li>
+            </ul>
+          </li>
+          <li className='resume__timeframe'>
+            <header>
+              <h3>RED Interactive</h3>
+              <h4>Santa Monica, CA</h4>
+              <DateRange content={{ dateStart: 'May 2013', dateEnd: 'Dec 2016' }} />
+            </header>
+            <ul className='block-list'>
+              <li><DateRange content={{ dateStart: 'Oct. 2015', dateEnd: 'Dec. 2016' }} /><span>assoc director, frontend engineering</span></li>
+              <li><DateRange content={{ dateStart: 'May 2013', dateEnd: 'Oct 2015' }} /><span>sr. frontend engineer</span></li>
+            </ul>
+            <ul className='bulleted-list'>
+              <li className='bulleted-list__item'>Trained and mentored engineering team members through on-boarding and one-on-one sessions</li>
+              {/* <li className='bulleted-list__item'>Evolved frontend stack through research, debate, and prototyping</li> */}
+              <li className='bulleted-list__item'>Contributed to weekly ideation, maintenance, and feature development on RED products team</li>
+              <li className='bulleted-list__item'>Built responsive and maintainable frontend architecture for a variety of client projects</li>
+            </ul>
+          </li>
+          <li className='resume__timeframe'>
+            <header>
+              <h3>Crispin Porter + Bogusky</h3>
+              <h4>Boulder, CO</h4>
+              <DateRange content={{ dateStart: 'Nov 2008', dateEnd: 'May 2013' }} />
+            </header>
+            <ul className='block-list'>
+              <li><DateRange content={{ dateStart: 'Oct 2011', dateEnd: 'May 2013' }} /><span>architecture lead</span></li>
+              <li><DateRange content={{ dateStart: 'Jun 2010', dateEnd: 'Oct 2011' }} /><span>sr. frontend developer</span></li>
+              <li><DateRange content={{ dateStart: 'Nov 2008', dateEnd: 'Jun. 2010' }} /><span>frontend developer</span></li>
+            </ul>
+            <ul className='bulleted-list'>
+              <li className='bulleted-list__item'>Led frontend development on a distributed Agile team for American Express OPEN Forum</li>
+              <li className='bulleted-list__item'>Defined and promoted best practices through code reviews, pair programming, and boilerplate/tooling evolvement</li>
+              <li className='bulleted-list__item'>Taught an 8 week Interactive Development course for Miami Ad School</li>
+            </ul>
+          </li>
+          <li className='resume__timeframe'>
+            <header>
+              <h3>Atomicdust </h3>
+              <h4>St. Louis, MO</h4>
+              <DateRange content={{ dateStart: 'Dec 2005', dateEnd: 'Oct 2008' }} />
+            </header>
+            <ul className='block-list'>
+              <li><DateRange content={{ dateStart: 'Dec 2006', dateEnd: 'Oct 2008' }} /><span>interactive developer</span></li>
+              <li><DateRange content={{ dateStart: 'Dec 2005', dateEnd: 'Dec 2006' }} /><span>intern</span></li>
+            </ul>
+            <ul className='bulleted-list'>
+              <li className='bulleted-list__item'>Collaborated with a small multi-disciplinary interactive team from ideation to execution</li>
+              <li className='bulleted-list__item'>Translated client needs into application requirements and deliverables</li>
+              <li className='bulleted-list__item'>Implemented custom data, application, and presentation layers for client web projects</li>
+            </ul>
+          </li>
+        </ul>
       </section>
       <section className='resume__section resume__section--education'>
         <h2 className='resume__heading resume__heading--education'>Education</h2>
