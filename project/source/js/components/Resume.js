@@ -19,7 +19,7 @@ function Resume (props) {
       </header>
       <section className='resume__section resume__section--purpose'>
         <h2 className='resume__heading resume__heading--purpose'>Purpose</h2>
-        <p>To develop robust and intuitive web applications that provide valuable services to users. To be a leader and a learner on a focused and collaborative team.</p>
+        <p>To develop robust and intuitive web applications that provide valuable services to people. To be a leader and a learner on a focused and collaborative team.</p>
       </section>
       <section className='resume__section resume__section--skills'>
         <h2 className='resume__heading resume__heading--skills'>Skills</h2>
