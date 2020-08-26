@@ -12,7 +12,11 @@
     }
 
     section {
-      margin-bottom: 30px;
+      margin-bottom: 8px;
+    }
+
+    section:last-child {
+      margin-bottom: 0;
     }
 
     .bulleted-list__item {
@@ -27,7 +31,7 @@
 
   .resume__header-main {
     padding: 0 0 0 10px;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     position: relative;
     text-align: left;
 
@@ -38,13 +42,13 @@
 
     h1 {
       color: #fff;
-      font-size: 38px;
+      font-size: 32px;
       font-weight: bold;
     }
 
     h2 {
       color: #867f97;
-      font-size: 26px;
+      font-size: 24px;
       font-weight: bold;
     }
 
@@ -67,22 +71,28 @@
     .icon-text--email {
       @include icon-link($type: 'email', $align-left: true);
       top: 9px;
+      font-size: 14px;
     }
 
     .icon-text--phone {
       @include icon-link($type: 'phone', $align-left: true);
       top: 27px;
+      font-size: 14px;
     }
 
     .icon-text--home {
       @include icon-link($type: 'home', $align-left: true);
       top: 44px;
+      font-size: 14px;
     }
   }
 
   .resume__heading {
+    font-size: 16px;
+    text-align: center;
+    display: block;
     padding: 0px 6px;
-    margin: 0 0 15px -10px;
+    margin: 0 0 10px -10px;
     color: #fff;
     z-index: 0;
 
@@ -92,11 +102,11 @@
 
     &:after {
       content: '';
-      border-top: 32px solid #ebebeb;
+      border-top: 7px solid #ebebeb;
       width: 100%;
       height: 100%;
       position: absolute;
-      top: 0;
+      top: 15px;
       left: 0;
       z-index: -1;
     }
@@ -105,11 +115,11 @@
   .resume__timeframe {
 
     &:not(:last-of-type) {
-      margin-bottom: 30px;
+      margin-bottom: 5px;
     }
 
     h3 {
-      font-size: 16px;
+      font-size: 15px;
     }
 
     h4 {
@@ -128,6 +138,7 @@
     }
 
     .block-list {
+      width: 180px;
 
       li {
         font-size: 10px;
@@ -139,6 +150,9 @@
 
     .bulleted-list {
       @include flex-container;
+      justify-content: center;
+      width: 650px;
+      margin: auto;
     }
   }
 
@@ -147,7 +161,7 @@
     li {
       float: none;
       width: 100%;
-      font-size: 13px;
+      font-size: 12px;
 
       &:not(:last-of-type) {
         width: 100%;

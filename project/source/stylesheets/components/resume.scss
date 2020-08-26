@@ -144,19 +144,20 @@
 
     h3 {
       float: left;
-      margin: -2px 0 0 0;
-      font-size: 17px;
+      margin: 0;
+      font-size: 15px;
+      font-weight: normal;
     }
 
     h4 {
       float: left;
       margin: 0 0 0 20px;
-      font-size: 14px;
+      font-size: 13px;
       line-height: 19px;
     }
 
     .date-range {
-      font-size: 17px;
+      font-size: 16px;
       float: right;
       font-weight: bold;
     }
@@ -170,7 +171,7 @@
 
     li {
       overflow: hidden;
-      font-size: 13px;
+      font-size: 12px;
 
       &:not(:last-child) {
         margin-bottom: 10px;
@@ -208,14 +209,14 @@
 .resume__heading--skills {
 
   &:before {
-    content: 'fitness_center';
+    content: 'psychology';
   }
 }
 
 .resume__heading--experience {
 
   &:before {
-    content: 'web';
+    content: 'work_outline';
   }
 }
 
