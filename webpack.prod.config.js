@@ -9,7 +9,7 @@ const OccurenceOrderPlugin = webpack.optimize.OccurenceOrderPlugin
 const DedupePlugin = webpack.optimize.DedupePlugin
 
 const UGLIFY_CONFIG = {
-  sourceMap: false,
+  sourceMap: true,
   mangle: true,
   comments: false,
   compress: {
@@ -49,7 +49,7 @@ function createWebpackPlugins () {
   return plugins
 }
 
-config.devtool = 'cheap-module-source-map'
+config.devtool = 'source-map'
 config.module.loaders.push(...createWebpackLoaders())
 config.plugins.push(...createWebpackPlugins())
 module.exports = config
